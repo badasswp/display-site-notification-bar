@@ -40,6 +40,11 @@ class NoticeBar extends Service implements Kernel {
 		$site_notice_text_color       = $settings['site_notice_text_color'] ?? '';
 		$site_notice_background_color = $settings['site_notice_background_color'] ?? '';
 		$site_notice_position         = $settings['site_notice_position'] ?? '';
+		$site_notice_visibility       = $settings['site_notice_visibility'] ?? '';
+
+		if ( 'home' === $site_notice_visibility && ! is_home() ) {
+			return;
+		}
 
 		printf(
 			'<section class="site-notification-bar" style="%4$s: 0; background: %3$s;">

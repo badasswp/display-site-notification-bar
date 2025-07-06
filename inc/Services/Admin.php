@@ -78,6 +78,13 @@ class Admin extends Service implements Kernel {
 	const SITE_NOTICE_POSITION = 'site_notice_position';
 
 	/**
+	 * Site Notice Visbility.
+	 *
+	 * @var string
+	 */
+	const SITE_NOTICE_VISIBILITY = 'site_notice_visibility';
+
+	/**
 	 * Bind to WP.
 	 *
 	 * @since 1.0.0
@@ -235,6 +242,13 @@ class Admin extends Service implements Kernel {
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,
 			],
+			[
+				'name'    => self::SITE_NOTICE_VISIBILITY,
+				'label'   => __( 'Notice Visibility', 'site-notification-bar' ),
+				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_VISIBILITY ) ],
+				'page'    => self::PLUGIN_SLUG,
+				'section' => self::SITE_NOTICE_SECTION,
+			],
 		];
 
 		/**
@@ -352,6 +366,43 @@ class Admin extends Service implements Kernel {
 	}
 
 	/**
+	 * Site Notice Visibility Callback.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	public function site_notice_visibility_cb(): void {
+		$pages = '';
+
+		foreach ( [ 'home', 'all' ] as $page ) {
+			$selected = '';
+
+			if ( ( $this->options[ self::SITE_NOTICE_VISIBILITY ] ?? '' ) === $page ) {
+				$selected = 'selected';
+			}
+
+			$pages .= sprintf(
+				'<option value="%1$s" %2$s>%1$s</option>',
+				esc_attr( $page ),
+				esc_attr( $selected ),
+			);
+		}
+
+		printf(
+			'<select
+				id="%2$s"
+				name="%1$s[%2$s]"
+				value="%3$s"
+			>%4$s</select>',
+			esc_attr( self::PLUGIN_OPTION ),
+			esc_attr( self::SITE_NOTICE_VISIBILITY ),
+			esc_attr( $this->options[ self::SITE_NOTICE_VISIBILITY ] ?? '' ),
+			$pages
+		);
+	}
+
+	/**
 	 * Sanitize Options.
 	 *
 	 * @since 1.0.0
@@ -386,6 +437,12 @@ class Admin extends Service implements Kernel {
 			$sanitized_options[ self::SITE_NOTICE_POSITION ] = sanitize_text_field( $input_data );
 		}
 
+		if ( isset( $input[ self::SITE_NOTICE_VISIBILITY ] ) ) {
+			$input_data = trim( (string) $input[ self::SITE_NOTICE_VISIBILITY ] );
+
+			$sanitized_options[ self::SITE_NOTICE_VISIBILITY ] = sanitize_text_field( $input_data );
+		}
+
 		return $sanitized_options;
 	}
 
@@ -416,6 +473,10 @@ class Admin extends Service implements Kernel {
 			$settings[ self::SITE_NOTICE_POSITION ] = 'bottom';
 		}
 
+		if ( empty( $settings[ self::SITE_NOTICE_VISIBILITY ] ) ) {
+			$settings[ self::SITE_NOTICE_VISIBILITY ] = 'home';
+		}
+
 		return apply_filters(
 			'site_notification_bar_settings',
 			[
@@ -423,6 +484,7 @@ class Admin extends Service implements Kernel {
 				self::SITE_NOTICE_TEXT_COLOR       => $settings[ self::SITE_NOTICE_TEXT_COLOR ] ?? '',
 				self::SITE_NOTICE_BACKGROUND_COLOR => $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ?? '',
 				self::SITE_NOTICE_POSITION         => $settings[ self::SITE_NOTICE_POSITION ] ?? '',
+				self::SITE_NOTICE_VISIBILITY       => $settings[ self::SITE_NOTICE_VISIBILITY ] ?? '',
 			]
 		);
 	}
