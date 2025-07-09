@@ -1,0 +1,10 @@
+{
+	"plugins": ["."],
+	"phpVersion": "8.2",
+	"port": 8484,
+	"testsPort": 8485,
+	"config": {
+		"WP_SITEURL": "http://site-notification-bar.localhost",
+		"WP_HOME": "http://site-notification-bar.localhost"
+	}
+}
