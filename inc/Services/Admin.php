@@ -365,19 +365,11 @@ class Admin extends Service implements Kernel {
 		if ( isset( $input[ self::SITE_NOTICE_TEXT ] ) ) {
 			$input_data = trim( (string) $input[ self::SITE_NOTICE_TEXT ] );
 
-			if ( empty( $input_data ) ) {
-				$input_data = '';
-			}
-
 			$sanitized_options[ self::SITE_NOTICE_TEXT ] = sanitize_textarea_field( $input_data );
 		}
 
 		if ( isset( $input[ self::SITE_NOTICE_TEXT_COLOR ] ) ) {
 			$input_data = trim( (string) $input[ self::SITE_NOTICE_TEXT_COLOR ] );
-
-			if ( empty( $input_data ) ) {
-				$input_data = '#FFF';
-			}
 
 			$sanitized_options[ self::SITE_NOTICE_TEXT_COLOR ] = sanitize_text_field( $input_data );
 		}
@@ -385,19 +377,11 @@ class Admin extends Service implements Kernel {
 		if ( isset( $input[ self::SITE_NOTICE_BACKGROUND_COLOR ] ) ) {
 			$input_data = trim( (string) $input[ self::SITE_NOTICE_BACKGROUND_COLOR ] );
 
-			if ( empty( $input_data ) ) {
-				$input_data = '#000';
-			}
-
 			$sanitized_options[ self::SITE_NOTICE_BACKGROUND_COLOR ] = sanitize_text_field( $input_data );
 		}
 
 		if ( isset( $input[ self::SITE_NOTICE_POSITION ] ) ) {
 			$input_data = trim( (string) $input[ self::SITE_NOTICE_POSITION ] );
-
-			if ( empty( $input_data ) ) {
-				$input_data = 'bottom';
-			}
 
 			$sanitized_options[ self::SITE_NOTICE_POSITION ] = sanitize_text_field( $input_data );
 		}
@@ -416,13 +400,29 @@ class Admin extends Service implements Kernel {
 	public static function get_settings(): array {
 		$settings = get_option( self::PLUGIN_OPTION, [] );
 
+		if ( empty( $settings[ self::SITE_NOTICE_TEXT ] ) ) {
+			$settings[ self::SITE_NOTICE_TEXT ] = '';
+		}
+
+		if ( empty( $settings[ self::SITE_NOTICE_TEXT_COLOR ] ) ) {
+			$settings[ self::SITE_NOTICE_TEXT_COLOR ] = '#FFF';
+		}
+
+		if ( empty( $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ) ) {
+			$settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] = '#000';
+		}
+
+		if ( empty( $settings[ self::SITE_NOTICE_POSITION ] ) ) {
+			$settings[ self::SITE_NOTICE_POSITION ] = 'bottom';
+		}
+
 		return apply_filters(
 			'site_notification_bar_settings',
 			[
-				self::SITE_NOTICE_TEXT             => $settings[ self::SITE_NOTICE_TEXT ] ?? '&nbsp;',
-				self::SITE_NOTICE_TEXT_COLOR       => $settings[ self::SITE_NOTICE_TEXT_COLOR ] ?? '#FFF',
-				self::SITE_NOTICE_BACKGROUND_COLOR => $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ?? '#000',
-				self::SITE_NOTICE_POSITION         => $settings[ self::SITE_NOTICE_POSITION ] ?? 'bottom',
+				self::SITE_NOTICE_TEXT             => $settings[ self::SITE_NOTICE_TEXT ] ?? '',
+				self::SITE_NOTICE_TEXT_COLOR       => $settings[ self::SITE_NOTICE_TEXT_COLOR ] ?? '',
+				self::SITE_NOTICE_BACKGROUND_COLOR => $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ?? '',
+				self::SITE_NOTICE_POSITION         => $settings[ self::SITE_NOTICE_POSITION ] ?? '',
 			]
 		);
 	}
