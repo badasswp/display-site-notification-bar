@@ -42,35 +42,13 @@ class NoticeBar extends Service implements Kernel {
 		$site_notice_position         = $settings['site_notice_position'] ?? '';
 
 		printf(
-			'%5$s
-			<section class="site-notification-bar" style="%4$s: 0; background: %3$s;">
+			'<section class="site-notification-bar" style="%4$s: 0; background: %3$s;">
 				<span style="color: %2$s;">%1$s</span>
 			</section>',
 			esc_html( $site_notice_text ),
 			esc_attr( $site_notice_text_color ),
 			esc_attr( $site_notice_background_color ),
 			esc_attr( $site_notice_position ),
-			$this->get_notice_bar_styles()
-		);
-	}
-
-	/**
-	 * Get Notice Bar styles.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function get_notice_bar_styles(): string {
-		return sprintf(
-			'<style type="text/css">%s</style>',
-			'.site-notification-bar {
-				padding: 35px;
-				z-index: 999;
-				position: fixed;
-				text-align: center;
-				width: 100vw;
-			}'
 		);
 	}
 }
