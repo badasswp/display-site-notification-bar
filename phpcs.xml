@@ -2,9 +2,11 @@
 <ruleset name="SiteNotificationBar">
 	<rule ref="WordPress-Core">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-		<exclude name="WordPress.PHP.DisallowShortTernary.Found" />
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
 		<exclude name="Universal.Operators.DisallowShortTernary.Found" />
+		<exclude name="WordPress.PHP.DisallowShortTernary.Found" />
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
 	</rule>
 
 	<arg value="s" />
