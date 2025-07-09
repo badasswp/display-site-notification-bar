@@ -327,7 +327,7 @@ class Admin extends Service implements Kernel {
 		foreach ( [ 'top', 'bottom' ] as $position ) {
 			$selected = '';
 
-			if ( $position === ( $this->options[ self::SITE_NOTICE_POSITION ] ?? '' ) ) {
+			if ( ( $this->options[ self::SITE_NOTICE_POSITION ] ?? '' ) === $position ) {
 				$selected = 'selected';
 			}
 
