@@ -3,7 +3,6 @@
 .github
 .wp-env.json
 package.json
-yarn.lock
 phpcs.xml
 phpunit.xml
 README.md
