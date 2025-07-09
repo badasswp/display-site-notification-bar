@@ -11,6 +11,7 @@
 namespace SiteNotificationBar\Core;
 
 use SiteNotificationBar\Interfaces\Kernel;
+use SiteNotificationBar\Services\NoticeBar;
 use SiteNotificationBar\Services\Admin;
 
 class Container implements Kernel {
@@ -31,6 +32,7 @@ class Container implements Kernel {
 	public function __construct() {
 		static::$services = [
 			Admin::class,
+			NoticeBar::class,
 		];
 	}
 
