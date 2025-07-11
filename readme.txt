@@ -8,22 +8,61 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display a notice bar on your WP home page.
+Display a notice bar on your WP home page. It also allows you to customize how the notification bar looks like.
 
 == Installation ==
 
 1. Go to 'Plugins > Add New' on your WordPress admin dashboard.
 2. Search for 'Site Notification Bar' plugin from the official WordPress plugin repository.
 3. Click 'Install Now' and then 'Activate'.
+4. To get started, head over to the Site Notification Bar options page and configure your settings of choice.
+5. That's it! You're all set to start using the Site Notification Bar plugin.
+6. Head over to your home page to see your notification bar in place.
 
 == Description ==
 
-Display a notice bar on your WP home page.
+This plugin makes it super easy to display a notifiction bar on the front-end. It also allows you to customize how the notification bar looks like. It also ships with custom filters that allows you to modify the settings via code.
+
+If you're looking for a plugin for displaying a notification bar on your home page that is both light-weight and quick, then this is your best pick!
+
+= ✔️ Features =
+
+The plugin provides the following capabilities:
+
+✔️ <strong>Custom filters</strong>: `site_notification_bar_admin_fields` && `site_notification_bar_settings` for customising the Post & Meta options.
+✔️ Available in <strong>mutiple langauges</strong> such as Arabic, Chinese, Hebrew, Hindi, Russian, German, Italian, Croatian, Spanish & French languages.
+✔️ Super Fast and easy to work it.
+✔️ <strong>Backward compatible</strong>, works with most WP versions.
+
+= ✨ Getting Started =
+
+1. To get started, head over to the Site Notification Bar options page and configure your settings of choice.
+
+2. That's it! You're all set to start using the Site Notification Bar plugin.
+
+3. Head over to your home page to see your notification bar in place.
+
+You can get a taste of how this plugin works, by using the [demo](https://tastewp.com/create/NMS/8.0/6.7.0/site-notification-bar/twentytwentythree?ni=true&origin=wp) link.
+
+= 🔌🎨 Plug and Play or Customize =
+
+The Site Notification Bar plugin is built to work right out of the box. Simply install, activate and start using.
+
+Want to add your personal touch? All of our documentation can be found [here](https://github.com/badasswp/site-notification-bar). You can override the plugin's behaviour with custom logic of your own using [hooks](https://github.com/badasswp/site-notification-bar?tab=readme-ov-file#hooks).
+
+== Screenshots ==
+
+1. Home Page - Your notification bar can be displayed at the top or bottom.
+2. Settings Page - Configure the plugin options of your choice.
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial plugin release.
+* Add custom filters `site_notification_bar_admin_fields` && `site_notification_bar_settings` for customising the plugin options.
+* Add language translations.
+* Update README notes.
+* Tested up to WP 6.8.1
 
 == Contribute ==
 
