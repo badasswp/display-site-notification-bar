@@ -2,13 +2,13 @@
 
 Display a notice bar on your WP home page.
 
-<img width="1277" alt="cpoiu-mini" src="https://github.com/user-attachments/assets/fbc5c010-1a3b-4746-99ad-fc0a762e6e31" />
+<img width="1037" height="735" alt="Screenshot 2025-07-09 at 02 55 58" src="https://github.com/user-attachments/assets/40cf28d9-1584-449d-9821-43153e693f67" />
 
 ## Site Notification Bar?
 
 This plugin makes it super easy to display a notifiction bar on the front-end. It also allows you to customize how the notification bar looks like.
 
-https://github.com/user-attachments/assets/71ca31db-0416-4a7e-88fc-b1021121a663
+<img width="1037" height="735" alt="Screenshot 2025-07-09 at 02 55 58" src="https://github.com/user-attachments/assets/c99c9d61-38b6-40b8-9e1b-f18065898888" />
 
 ### Hooks
 
