@@ -44,3 +44,39 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/badasswp"
 msgstr ""
+
+#. Fatal Error: Composer not setup in %s
+msgid "Fatal Error: Composer not setup in %s"
+msgstr ""
+
+#. Site Notification Bar
+msgid "Site Notification Bar"
+msgstr ""
+
+#. Notice Bar Settings
+msgid "Notice Bar Settings"
+msgstr ""
+
+#. Notice Text
+msgid "Notice Text"
+msgstr ""
+
+#. Notice Text Color
+msgid "Notice Text Color"
+msgstr ""
+
+#. Notice Background Color
+msgid "Notice Background Color"
+msgstr ""
+
+#. Notice Position
+msgid "Notice Position"
+msgstr ""
+
+#. Notice Visibility
+msgid "Notice Visibility"
+msgstr ""
+
+#. Notice Active
+msgid "Notice Active"
+msgstr ""
