@@ -26,7 +26,7 @@ public function custom_admin_fields( $fields ): array {
         'cb'      => [ $this, 'name_of_your_control_callback' ],
         'page'    => 'site-notification-bar',
         'section' => 'site_notice_section',
-    ]
+    ];
 
     return $fields;
 }
