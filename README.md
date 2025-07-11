@@ -2,7 +2,7 @@
 
 Display a notice bar on your WP home page.
 
-<img width="720" alt="Screenshot 2025-07-09 at 02 55 58" src="https://github.com/user-attachments/assets/40cf28d9-1584-449d-9821-43153e693f67" />
+<img width="635" alt="site-notification-bar" src="https://github.com/user-attachments/assets/50021370-f65d-48e9-bfd4-d76c49a89291" />
 
 ## Site Notification Bar?
 
