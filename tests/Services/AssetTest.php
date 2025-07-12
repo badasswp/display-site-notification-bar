@@ -8,6 +8,7 @@ use SiteNotificationBar\Services\Asset;
 
 /**
  * @covers \SiteNotificationBar\Services\Asset::register
+ * @covers \SiteNotificationBar\Services\Asset::enqueue_frontend_assets
  */
 class AssetTest extends TestCase {
 	public function setUp(): void {
