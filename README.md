@@ -8,7 +8,7 @@ Display a notice bar on your WP home page.
 
 This plugin makes it super easy to display a notifiction bar on the front-end. It also allows you to customize how the notification bar looks like.
 
-<img width="720" alt="Screenshot 2025-07-09 at 02 55 58" src="https://github.com/user-attachments/assets/c99c9d61-38b6-40b8-9e1b-f18065898888" />
+<img width="720" alt="site-notification-bar-settings" src="https://github.com/user-attachments/assets/1e227f6e-ee54-4e57-81fd-45f0a7aa7c4b" />
 
 ### Hooks
 
