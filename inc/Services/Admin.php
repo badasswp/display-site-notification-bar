@@ -157,7 +157,7 @@ class Admin extends Service implements Kernel {
 			add_settings_section(
 				$section['name'] ?? '',
 				$section['label'] ?? '',
-				static function () {},
+				null,
 				self::PLUGIN_SLUG
 			);
 		}
@@ -184,7 +184,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return mixed[]
 	 */
-	public function get_sections(): array {
+	protected function get_sections(): array {
 		return [
 			[
 				'name'  => self::SITE_NOTICE_SECTION,
@@ -212,7 +212,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return mixed[]
 	 */
-	public function get_options(): array {
+	protected function get_options(): array {
 		$options = [
 			[
 				'name'    => self::SITE_NOTICE_TEXT,
