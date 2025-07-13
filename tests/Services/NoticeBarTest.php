@@ -10,6 +10,7 @@ use SiteNotificationBar\Services\Admin;
 /**
  * @covers \SiteNotificationBar\Services\NoticeBar::register
  * @covers \SiteNotificationBar\Services\NoticeBar::display_notice_bar
+ * @covers \SiteNotificationBar\Services\Admin::get_settings
  */
 class NoticeBarTest extends TestCase {
 	public function setUp(): void {
