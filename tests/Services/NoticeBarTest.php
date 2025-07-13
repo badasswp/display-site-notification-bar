@@ -54,14 +54,14 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'esc_html' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
 
 		\WP_Mock::userFunction( 'esc_attr' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
@@ -101,14 +101,14 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'esc_html' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
 
 		\WP_Mock::userFunction( 'esc_attr' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
@@ -157,14 +157,14 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'esc_html' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
 
 		\WP_Mock::userFunction( 'esc_attr' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
@@ -204,14 +204,14 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'esc_html' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
 
 		\WP_Mock::userFunction( 'esc_attr' )
 			->andReturnUsing(
-				function( $arg ) {
+				function ( $arg ) {
 					return $arg;
 				}
 			);
