@@ -292,4 +292,27 @@ class AdminTest extends TestCase {
 		$this->assertSame( $options, $admin->get_options() );
 		$this->assertConditionsMet();
 	}
+
+	public function test_text_cb() {
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		$response = ( new Admin() )->text_cb();
+
+		$this->expectOutputString(
+			'<textarea
+				id="text"
+				name="site_notification_bar[text]"
+				rows="5"
+				cols="50"
+				placeholder="We use cookies on our site..."
+			></textarea>'
+		);
+		$this->assertNull( $response );
+		$this->assertConditionsMet();
+	}
 }
