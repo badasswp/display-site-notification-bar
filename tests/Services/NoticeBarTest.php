@@ -36,11 +36,11 @@ class NoticeBarTest extends TestCase {
 		$notice_bar = new NoticeBar();
 
 		$settings = [
-			'site_notice_text'             => 'Hello World!',
-			'site_notice_text_color'       => '#FFF',
-			'site_notice_background_color' => '#F00',
-			'site_notice_position'         => 'top',
-			'site_notice_visibility'       => 'home',
+			'text'             => 'Hello World!',
+			'text_color'       => '#FFF',
+			'background_color' => '#F00',
+			'position'         => 'top',
+			'visibility'       => 'home',
 		];
 
 		\WP_Mock::userFunction( 'get_option' )
@@ -89,11 +89,11 @@ class NoticeBarTest extends TestCase {
 		\WP_Mock::expectFilter(
 			'site_notification_bar_settings',
 			[
-				'site_notice_text'             => '',
-				'site_notice_text_color'       => '#FFF',
-				'site_notice_background_color' => '#000',
-				'site_notice_position'         => 'bottom',
-				'site_notice_visibility'       => 'home',
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#000',
+				'position'         => 'bottom',
+				'visibility'       => 'home',
 			]
 		);
 
@@ -136,20 +136,20 @@ class NoticeBarTest extends TestCase {
 		\WP_Mock::onFilter( 'site_notification_bar_settings' )
 			->with(
 				[
-					'site_notice_text'             => '',
-					'site_notice_text_color'       => '#FFF',
-					'site_notice_background_color' => '#000',
-					'site_notice_position'         => 'bottom',
-					'site_notice_visibility'       => 'home',
+					'text'             => '',
+					'text_color'       => '#FFF',
+					'background_color' => '#000',
+					'position'         => 'bottom',
+					'visibility'       => 'home',
 				]
 			)
 			->reply(
 				[
-					'site_notice_text'             => 'Filtered Text',
-					'site_notice_text_color'       => '#FF0',
-					'site_notice_background_color' => '#F00',
-					'site_notice_position'         => 'bottom',
-					'site_notice_visibility'       => 'home',
+					'text'             => 'Filtered Text',
+					'text_color'       => '#FF0',
+					'background_color' => '#F00',
+					'position'         => 'bottom',
+					'visibility'       => 'home',
 				]
 			);
 
@@ -192,11 +192,11 @@ class NoticeBarTest extends TestCase {
 		\WP_Mock::expectFilter(
 			'site_notification_bar_settings',
 			[
-				'site_notice_text'             => '',
-				'site_notice_text_color'       => '#FFF',
-				'site_notice_background_color' => '#000',
-				'site_notice_position'         => 'bottom',
-				'site_notice_visibility'       => 'home',
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#000',
+				'position'         => 'bottom',
+				'visibility'       => 'home',
 			]
 		);
 

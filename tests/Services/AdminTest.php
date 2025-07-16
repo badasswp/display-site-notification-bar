@@ -144,7 +144,7 @@ class AdminTest extends TestCase {
 		\WP_Mock::userFunction( 'add_settings_section' )
 			->once()
 			->with(
-				'site_notice_section',
+				'site-notice-section',
 				'Notice Bar Settings',
 				null,
 				'site-notification-bar'
@@ -155,39 +155,39 @@ class AdminTest extends TestCase {
 			'site_notification_bar_admin_fields',
 			[
 				[
-					'name'    => 'site_notice_text',
+					'name'    => 'text',
 					'label'   => 'Notice Text',
-					'cb'      => [ $admin, 'site_notice_text_cb' ],
+					'cb'      => [ $admin, 'text_cb' ],
 					'page'    => 'site-notification-bar',
-					'section' => 'site_notice_section',
+					'section' => 'site-notice-section',
 				],
 				[
-					'name'    => 'site_notice_text_color',
+					'name'    => 'text_color',
 					'label'   => 'Notice Text Color',
-					'cb'      => [ $admin, 'site_notice_text_color_cb' ],
+					'cb'      => [ $admin, 'text_color_cb' ],
 					'page'    => 'site-notification-bar',
-					'section' => 'site_notice_section',
+					'section' => 'site-notice-section',
 				],
 				[
-					'name'    => 'site_notice_background_color',
+					'name'    => 'background_color',
 					'label'   => 'Notice Background Color',
-					'cb'      => [ $admin, 'site_notice_background_color_cb' ],
+					'cb'      => [ $admin, 'background_color_cb' ],
 					'page'    => 'site-notification-bar',
-					'section' => 'site_notice_section',
+					'section' => 'site-notice-section',
 				],
 				[
-					'name'    => 'site_notice_position',
+					'name'    => 'position',
 					'label'   => 'Notice Position',
-					'cb'      => [ $admin, 'site_notice_position_cb' ],
+					'cb'      => [ $admin, 'position_cb' ],
 					'page'    => 'site-notification-bar',
-					'section' => 'site_notice_section',
+					'section' => 'site-notice-section',
 				],
 				[
-					'name'    => 'site_notice_visibility',
+					'name'    => 'visibility',
 					'label'   => 'Notice Visibility',
-					'cb'      => [ $admin, 'site_notice_visibility_cb' ],
+					'cb'      => [ $admin, 'visibility_cb' ],
 					'page'    => 'site-notification-bar',
-					'section' => 'site_notice_section',
+					'section' => 'site-notice-section',
 				],
 			]
 		);
@@ -218,7 +218,7 @@ class AdminTest extends TestCase {
 			$sections,
 			[
 				[
-					'name'  => 'site_notice_section',
+					'name'  => 'site-notice-section',
 					'label' => 'Notice Bar Settings',
 				],
 			]
@@ -241,39 +241,39 @@ class AdminTest extends TestCase {
 
 		$options = [
 			[
-				'name'    => 'site_notice_text',
+				'name'    => 'text',
 				'label'   => 'Notice Text',
-				'cb'      => [ $admin, 'site_notice_text_cb' ],
+				'cb'      => [ $admin, 'text_cb' ],
 				'page'    => 'site-notification-bar',
-				'section' => 'site_notice_section',
+				'section' => 'site-notice-section',
 			],
 			[
-				'name'    => 'site_notice_text_color',
+				'name'    => 'text_color',
 				'label'   => 'Notice Text Color',
-				'cb'      => [ $admin, 'site_notice_text_color_cb' ],
+				'cb'      => [ $admin, 'text_color_cb' ],
 				'page'    => 'site-notification-bar',
-				'section' => 'site_notice_section',
+				'section' => 'site-notice-section',
 			],
 			[
-				'name'    => 'site_notice_background_color',
+				'name'    => 'background_color',
 				'label'   => 'Notice Background Color',
-				'cb'      => [ $admin, 'site_notice_background_color_cb' ],
+				'cb'      => [ $admin, 'background_color_cb' ],
 				'page'    => 'site-notification-bar',
-				'section' => 'site_notice_section',
+				'section' => 'site-notice-section',
 			],
 			[
-				'name'    => 'site_notice_position',
+				'name'    => 'position',
 				'label'   => 'Notice Position',
-				'cb'      => [ $admin, 'site_notice_position_cb' ],
+				'cb'      => [ $admin, 'position_cb' ],
 				'page'    => 'site-notification-bar',
-				'section' => 'site_notice_section',
+				'section' => 'site-notice-section',
 			],
 			[
-				'name'    => 'site_notice_visibility',
+				'name'    => 'visibility',
 				'label'   => 'Notice Visibility',
-				'cb'      => [ $admin, 'site_notice_visibility_cb' ],
+				'cb'      => [ $admin, 'visibility_cb' ],
 				'page'    => 'site-notification-bar',
-				'section' => 'site_notice_section',
+				'section' => 'site-notice-section',
 			],
 		];
 
