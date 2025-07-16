@@ -36,13 +36,13 @@ class NoticeBar extends Service implements Kernel {
 	public function display_notice_bar(): void {
 		$settings = Admin::get_settings();
 
-		$site_notice_text             = $settings['site_notice_text'] ?? '';
-		$site_notice_text_color       = $settings['site_notice_text_color'] ?? '';
-		$site_notice_background_color = $settings['site_notice_background_color'] ?? '';
-		$site_notice_position         = $settings['site_notice_position'] ?? '';
-		$site_notice_visibility       = $settings['site_notice_visibility'] ?? '';
+		$text             = $settings['text'] ?? '';
+		$text_color       = $settings['text_color'] ?? '';
+		$background_color = $settings['background_color'] ?? '';
+		$position         = $settings['position'] ?? '';
+		$visibility       = $settings['visibility'] ?? '';
 
-		if ( 'home' === $site_notice_visibility && ! is_home() ) {
+		if ( 'home' === $visibility && ! is_home() ) {
 			return;
 		}
 
@@ -50,10 +50,10 @@ class NoticeBar extends Service implements Kernel {
 			'<section class="site-notification-bar" style="%4$s: 0; background: %3$s;">
 				<span style="color: %2$s;">%1$s</span>
 			</section>',
-			esc_html( $site_notice_text ),
-			esc_attr( $site_notice_text_color ),
-			esc_attr( $site_notice_background_color ),
-			esc_attr( $site_notice_position ),
+			esc_html( $text ),
+			esc_attr( $text_color ),
+			esc_attr( $background_color ),
+			esc_attr( $position ),
 		);
 	}
 }

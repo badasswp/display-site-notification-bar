@@ -47,42 +47,42 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_SECTION = 'site_notice_section';
+	const SITE_NOTICE_SECTION = 'site-notice-section';
 
 	/**
 	 * Site Notice Text.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_TEXT = 'site_notice_text';
-
-	/**
-	 * Site Notice Background Color.
-	 *
-	 * @var string
-	 */
-	const SITE_NOTICE_BACKGROUND_COLOR = 'site_notice_background_color';
+	const SITE_NOTICE_TEXT = 'text';
 
 	/**
 	 * Site Notice Text Color.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_TEXT_COLOR = 'site_notice_text_color';
+	const SITE_NOTICE_TEXT_COLOR = 'text_color';
+
+	/**
+	 * Site Notice Background Color.
+	 *
+	 * @var string
+	 */
+	const SITE_NOTICE_BACKGROUND_COLOR = 'background_color';
 
 	/**
 	 * Site Notice Position.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_POSITION = 'site_notice_position';
+	const SITE_NOTICE_POSITION = 'position';
 
 	/**
 	 * Site Notice Visbility.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_VISIBILITY = 'site_notice_visibility';
+	const SITE_NOTICE_VISIBILITY = 'visibility';
 
 	/**
 	 * Bind to WP.
@@ -269,7 +269,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function site_notice_text_cb(): void {
+	public function text_cb(): void {
 		printf(
 			'<textarea
 				id="%2$s"
@@ -291,7 +291,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function site_notice_text_color_cb(): void {
+	public function text_color_cb(): void {
 		printf(
 			'<input
 			   type="text"
@@ -313,7 +313,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function site_notice_background_color_cb(): void {
+	public function background_color_cb(): void {
 		printf(
 			'<input
 				type="text"
@@ -335,7 +335,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function site_notice_position_cb(): void {
+	public function position_cb(): void {
 		$positions = '';
 
 		foreach ( [ 'top', 'bottom' ] as $position ) {
@@ -372,7 +372,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function site_notice_visibility_cb(): void {
+	public function visibility_cb(): void {
 		$pages = '';
 
 		foreach ( [ 'home', 'all' ] as $page ) {
