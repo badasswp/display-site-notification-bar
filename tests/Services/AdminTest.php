@@ -71,7 +71,7 @@ class AdminTest extends TestCase {
 			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
 
-		\WP_Mock::userFunction( '_e' )
+		\WP_Mock::userFunction( 'esc_html_e' )
 			->andReturnUsing(
 				function ( $arg ) {
 					echo $arg;

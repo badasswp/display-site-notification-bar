@@ -126,8 +126,8 @@ class Admin extends Service implements Kernel {
 		$this->options = get_option( self::PLUGIN_OPTION, [] );
 		?>
 		<div class="wrap">
-			<h1><?php _e( 'Display Site Notification Bar', 'display-site-notification-bar' ); ?></h1>
-			<p><?php _e( 'Display a notice bar on your WP home page.', 'display-site-notification-bar' ); ?></p>
+			<h1><?php esc_html_e( 'Display Site Notification Bar', 'display-site-notification-bar' ); ?></h1>
+			<p><?php esc_html_e( 'Display a notice bar on your WP home page.', 'display-site-notification-bar' ); ?></p>
 			<form method="post" action="options.php">
 			<?php
 				settings_fields( self::PLUGIN_GROUP );
