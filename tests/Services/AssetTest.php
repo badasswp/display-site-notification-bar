@@ -36,13 +36,13 @@ class AssetTest extends TestCase {
 		\WP_Mock::userFunction( 'plugin_dir_url' )
 			->once()
 			->with( $reflection->getFileName() )
-			->andReturn( 'https://example.com/wp-content/plugins/site-notification-bar/inc/Services/' );
+			->andReturn( 'https://example.com/wp-content/plugins/display-site-notification-bar/inc/Services/' );
 
 		\WP_Mock::userFunction( 'wp_enqueue_style' )
 			->once()
 			->with(
-				'site-notification-bar-styles',
-				'https://example.com/wp-content/plugins/site-notification-bar/inc/Services/../../styles.css',
+				'display-site-notification-bar-styles',
+				'https://example.com/wp-content/plugins/display-site-notification-bar/inc/Services/../../styles.css',
 				[],
 				'1.0.0'
 			)

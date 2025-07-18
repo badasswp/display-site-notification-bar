@@ -42,13 +42,13 @@ The plugin provides the following capabilities:
 
 3. Head over to your home page to see your notification bar in place.
 
-You can get a taste of how this plugin works, by using the [demo](https://tastewp.com/create/NMS/8.0/6.7.0/site-notification-bar/twentytwentythree?ni=true&origin=wp) link.
+You can get a taste of how this plugin works, by using the [demo](https://tastewp.com/create/NMS/8.0/6.7.0/display-site-notification-bar/twentytwentythree?ni=true&origin=wp) link.
 
 = 🔌🎨 Plug and Play or Customize =
 
 The Display Site Notification Bar plugin is built to work right out of the box. Simply install, activate and start using.
 
-Want to add your personal touch? All of our documentation can be found [here](https://github.com/badasswp/site-notification-bar). You can override the plugin's behaviour with custom logic of your own using [hooks](https://github.com/badasswp/site-notification-bar?tab=readme-ov-file#hooks).
+Want to add your personal touch? All of our documentation can be found [here](https://github.com/badasswp/display-site-notification-bar). You can override the plugin's behaviour with custom logic of your own using [hooks](https://github.com/badasswp/display-site-notification-bar?tab=readme-ov-file#hooks).
 
 == Screenshots ==
 
@@ -66,4 +66,4 @@ Want to add your personal touch? All of our documentation can be found [here](ht
 
 == Contribute ==
 
-If you'd like to contribute to the development of this plugin, you can find it on [GitHub](https://github.com/badasswp/site-notification-bar).
+If you'd like to contribute to the development of this plugin, you can find it on [GitHub](https://github.com/badasswp/display-site-notification-bar).

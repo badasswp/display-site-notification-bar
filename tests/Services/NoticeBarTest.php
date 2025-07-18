@@ -70,7 +70,7 @@ class NoticeBarTest extends TestCase {
 		$register = $notice_bar->display_notice_bar();
 
 		$this->expectOutputString(
-			'<section class="site-notification-bar" style="top: 0; background: #F00;">
+			'<section class="display-site-notification-bar" style="top: 0; background: #F00;">
 				<span style="color: #FFF;">Hello World!</span>
 			</section>'
 		);
@@ -117,7 +117,7 @@ class NoticeBarTest extends TestCase {
 		$register = $notice_bar->display_notice_bar();
 
 		$this->expectOutputString(
-			'<section class="site-notification-bar" style="bottom: 0; background: #000;">
+			'<section class="display-site-notification-bar" style="bottom: 0; background: #000;">
 				<span style="color: #FFF;"></span>
 			</section>'
 		);
@@ -173,7 +173,7 @@ class NoticeBarTest extends TestCase {
 		$register = $notice_bar->display_notice_bar();
 
 		$this->expectOutputString(
-			'<section class="site-notification-bar" style="bottom: 0; background: #F00;">
+			'<section class="display-site-notification-bar" style="bottom: 0; background: #F00;">
 				<span style="color: #FF0;">Filtered Text</span>
 			</section>'
 		);

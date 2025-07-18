@@ -1,14 +1,14 @@
-# site-notification-bar
+# display-site-notification-bar
 
 Display a notice bar on your WP home page.
 
-<img width="640" alt="site-notification-bar" src="https://github.com/user-attachments/assets/4f4bff9e-c2ea-4afe-8012-1dc736ab17ef" />
+<img width="640" alt="display-site-notification-bar" src="https://github.com/user-attachments/assets/4f4bff9e-c2ea-4afe-8012-1dc736ab17ef" />
 
 ## Display Site Notification Bar?
 
 This plugin makes it super easy to display a notifiction bar on the front-end. It also allows you to customize how the notification bar looks like.
 
-<img width="720" alt="site-notification-bar-settings" src="https://github.com/user-attachments/assets/1e227f6e-ee54-4e57-81fd-45f0a7aa7c4b" />
+<img width="720" alt="display-site-notification-bar-settings" src="https://github.com/user-attachments/assets/1e227f6e-ee54-4e57-81fd-45f0a7aa7c4b" />
 
 ### Hooks
 
@@ -24,7 +24,7 @@ public function custom_admin_fields( $fields ): array {
         'name'    => 'name_of_your_control',
         'label'   => __( 'Control Label', 'your-text-domain' ),
         'cb'      => [ $this, 'name_of_your_control_callback' ],
-        'page'    => 'site-notification-bar',
+        'page'    => 'display-site-notification-bar',
         'section' => 'site_notice_section',
     ];
 
@@ -79,7 +79,7 @@ yarn start
 This should spin up a local WP env instance for you to work with at:
 
 ```bash
-http://site-notification-bar.localhost:8484
+http://display-site-notification-bar.localhost:8484
 ```
 
 You should now have a functioning local WP env to work with. To login to the `wp-admin` backend, please use `admin` for username & `password` for password.

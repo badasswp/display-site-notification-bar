@@ -4,7 +4,7 @@
 	"port": 8484,
 	"testsPort": 8485,
 	"config": {
-		"WP_SITEURL": "http://site-notification-bar.localhost",
-		"WP_HOME": "http://site-notification-bar.localhost"
+		"WP_SITEURL": "http://display-site-notification-bar.localhost",
+		"WP_HOME": "http://display-site-notification-bar.localhost"
 	}
 }

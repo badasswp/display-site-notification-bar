@@ -51,7 +51,7 @@ class AdminTest extends TestCase {
 				'Display Site Notification Bar',
 				'Display Site Notification Bar',
 				'manage_options',
-				'site-notification-bar',
+				'display-site-notification-bar',
 				[ $admin, 'register_options_cb' ],
 				'dashicons-align-wide',
 				100
@@ -112,8 +112,8 @@ class AdminTest extends TestCase {
 			<h1>Display Site Notification Bar</h1>
 			<p>Display a notice bar on your WP home page.</p>
 			<form method="post" action="options.php">
-								<section id="site-notification-bar-group"></section>
-										<div id="site-notification-bar"></div>
+								<section id="display-site-notification-bar-group"></section>
+										<div id="display-site-notification-bar"></div>
 										<button type="submit">Save Changes</button>
 								</form>
 		</div>
@@ -135,7 +135,7 @@ class AdminTest extends TestCase {
 
 		\WP_Mock::userFunction( 'register_setting' )
 			->with(
-				'site-notification-bar-group',
+				'display-site-notification-bar-group',
 				'display_site_notification_bar',
 				[ $admin, 'sanitize_options' ]
 			)
@@ -147,7 +147,7 @@ class AdminTest extends TestCase {
 				'site-notice-section',
 				'Notice Bar Settings',
 				null,
-				'site-notification-bar'
+				'display-site-notification-bar'
 			)
 			->andReturn( null );
 
@@ -158,35 +158,35 @@ class AdminTest extends TestCase {
 					'name'    => 'text',
 					'label'   => 'Notice Text',
 					'cb'      => [ $admin, 'text_cb' ],
-					'page'    => 'site-notification-bar',
+					'page'    => 'display-site-notification-bar',
 					'section' => 'site-notice-section',
 				],
 				[
 					'name'    => 'text_color',
 					'label'   => 'Notice Text Color',
 					'cb'      => [ $admin, 'text_color_cb' ],
-					'page'    => 'site-notification-bar',
+					'page'    => 'display-site-notification-bar',
 					'section' => 'site-notice-section',
 				],
 				[
 					'name'    => 'background_color',
 					'label'   => 'Notice Background Color',
 					'cb'      => [ $admin, 'background_color_cb' ],
-					'page'    => 'site-notification-bar',
+					'page'    => 'display-site-notification-bar',
 					'section' => 'site-notice-section',
 				],
 				[
 					'name'    => 'position',
 					'label'   => 'Notice Position',
 					'cb'      => [ $admin, 'position_cb' ],
-					'page'    => 'site-notification-bar',
+					'page'    => 'display-site-notification-bar',
 					'section' => 'site-notice-section',
 				],
 				[
 					'name'    => 'visibility',
 					'label'   => 'Notice Visibility',
 					'cb'      => [ $admin, 'visibility_cb' ],
-					'page'    => 'site-notification-bar',
+					'page'    => 'display-site-notification-bar',
 					'section' => 'site-notice-section',
 				],
 			]
@@ -244,35 +244,35 @@ class AdminTest extends TestCase {
 				'name'    => 'text',
 				'label'   => 'Notice Text',
 				'cb'      => [ $admin, 'text_cb' ],
-				'page'    => 'site-notification-bar',
+				'page'    => 'display-site-notification-bar',
 				'section' => 'site-notice-section',
 			],
 			[
 				'name'    => 'text_color',
 				'label'   => 'Notice Text Color',
 				'cb'      => [ $admin, 'text_color_cb' ],
-				'page'    => 'site-notification-bar',
+				'page'    => 'display-site-notification-bar',
 				'section' => 'site-notice-section',
 			],
 			[
 				'name'    => 'background_color',
 				'label'   => 'Notice Background Color',
 				'cb'      => [ $admin, 'background_color_cb' ],
-				'page'    => 'site-notification-bar',
+				'page'    => 'display-site-notification-bar',
 				'section' => 'site-notice-section',
 			],
 			[
 				'name'    => 'position',
 				'label'   => 'Notice Position',
 				'cb'      => [ $admin, 'position_cb' ],
-				'page'    => 'site-notification-bar',
+				'page'    => 'display-site-notification-bar',
 				'section' => 'site-notice-section',
 			],
 			[
 				'name'    => 'visibility',
 				'label'   => 'Notice Visibility',
 				'cb'      => [ $admin, 'visibility_cb' ],
-				'page'    => 'site-notification-bar',
+				'page'    => 'display-site-notification-bar',
 				'section' => 'site-notice-section',
 			],
 		];

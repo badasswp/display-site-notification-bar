@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.6\n"
-"X-Domain: site-notification-bar\n"
+"X-Domain: display-site-notification-bar\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -34,8 +34,8 @@ msgid "Display a notice bar on your WP home page."
 msgstr "Muestra una barra de notificaciones en tu página de inicio de WP."
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/badasswp/site-notification-bar"
-msgstr "https://github.com/badasswp/site-notification-bar"
+msgid "https://github.com/badasswp/display-site-notification-bar"
+msgstr "https://github.com/badasswp/display-site-notification-bar"
 
 #. Author of the plugin/theme
 msgid "badasswp"

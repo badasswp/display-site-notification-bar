@@ -21,7 +21,7 @@ class Asset extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	protected static $name = 'site-notification-bar';
+	protected static $name = 'display-site-notification-bar';
 
 	/**
 	 * Register Asset.

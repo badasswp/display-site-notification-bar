@@ -1,5 +1,5 @@
 {
-	"name": "badasswp/site-notification-bar",
+	"name": "badasswp/display-site-notification-bar",
 	"description": "Display a notice bar on your WP home page.",
 	"type": "package",
 	"license": "GPL-2.0-or-later",

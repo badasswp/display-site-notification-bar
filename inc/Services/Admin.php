@@ -26,7 +26,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const PLUGIN_SLUG = 'site-notification-bar';
+	const PLUGIN_SLUG = 'display-site-notification-bar';
 
 	/**
 	 * Plugin Option.
@@ -40,7 +40,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const PLUGIN_GROUP = 'site-notification-bar-group';
+	const PLUGIN_GROUP = 'display-site-notification-bar-group';
 
 	/**
 	 * Site Notice Section.
@@ -105,8 +105,8 @@ class Admin extends Service implements Kernel {
 	 */
 	public function register_options_page(): void {
 		add_menu_page(
-			__( 'Display Site Notification Bar', 'site-notification-bar' ),
-			__( 'Display Site Notification Bar', 'site-notification-bar' ),
+			__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
+			__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
 			'manage_options',
 			self::PLUGIN_SLUG,
 			[ $this, 'register_options_cb' ],
@@ -126,8 +126,8 @@ class Admin extends Service implements Kernel {
 		$this->options = get_option( self::PLUGIN_OPTION, [] );
 		?>
 		<div class="wrap">
-			<h1><?php _e( 'Display Site Notification Bar', 'site-notification-bar' ); ?></h1>
-			<p><?php _e( 'Display a notice bar on your WP home page.', 'site-notification-bar' ); ?></p>
+			<h1><?php _e( 'Display Site Notification Bar', 'display-site-notification-bar' ); ?></h1>
+			<p><?php _e( 'Display a notice bar on your WP home page.', 'display-site-notification-bar' ); ?></p>
 			<form method="post" action="options.php">
 			<?php
 				settings_fields( self::PLUGIN_GROUP );
@@ -188,7 +188,7 @@ class Admin extends Service implements Kernel {
 		return [
 			[
 				'name'  => self::SITE_NOTICE_SECTION,
-				'label' => __( 'Notice Bar Settings', 'site-notification-bar' ),
+				'label' => __( 'Notice Bar Settings', 'display-site-notification-bar' ),
 			],
 		];
 	}
@@ -216,35 +216,35 @@ class Admin extends Service implements Kernel {
 		$options = [
 			[
 				'name'    => self::SITE_NOTICE_TEXT,
-				'label'   => __( 'Notice Text', 'site-notification-bar' ),
+				'label'   => __( 'Notice Text', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_TEXT ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,
 			],
 			[
 				'name'    => self::SITE_NOTICE_TEXT_COLOR,
-				'label'   => __( 'Notice Text Color', 'site-notification-bar' ),
+				'label'   => __( 'Notice Text Color', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_TEXT_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,
 			],
 			[
 				'name'    => self::SITE_NOTICE_BACKGROUND_COLOR,
-				'label'   => __( 'Notice Background Color', 'site-notification-bar' ),
+				'label'   => __( 'Notice Background Color', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_BACKGROUND_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,
 			],
 			[
 				'name'    => self::SITE_NOTICE_POSITION,
-				'label'   => __( 'Notice Position', 'site-notification-bar' ),
+				'label'   => __( 'Notice Position', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_POSITION ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,
 			],
 			[
 				'name'    => self::SITE_NOTICE_VISIBILITY,
-				'label'   => __( 'Notice Visibility', 'site-notification-bar' ),
+				'label'   => __( 'Notice Visibility', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_VISIBILITY ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::SITE_NOTICE_SECTION,

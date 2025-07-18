@@ -47,7 +47,7 @@ class NoticeBar extends Service implements Kernel {
 		}
 
 		printf(
-			'<section class="site-notification-bar" style="%4$s: 0; background: %3$s;">
+			'<section class="display-site-notification-bar" style="%4$s: 0; background: %3$s;">
 				<span style="color: %2$s;">%1$s</span>
 			</section>',
 			esc_html( $text ),

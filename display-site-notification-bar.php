@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: Display Display Site Notification Bar
- * Plugin URI:  https://github.com/badasswp/site-notification-bar
+ * Plugin URI:  https://github.com/badasswp/display-site-notification-bar
  * Description: Display a notice bar on your WP home page.
  * Version:     1.0.0
  * Author:      badasswp
  * Author URI:  https://github.com/badasswp
  * License:     GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: site-notification-bar
+ * Text Domain: display-site-notification-bar
  * Domain Path: /languages
  *
  * @package DisplaySiteNotificationBar
@@ -29,7 +29,7 @@ if ( ! file_exists( SITE_NOTIFICATION_BAR_AUTOLOAD ) ) {
 		function () {
 			vprintf(
 				/* translators: Plugin directory path. */
-				esc_html__( 'Fatal Error: Composer not setup in %s', 'site-notification-bar' ),
+				esc_html__( 'Fatal Error: Composer not setup in %s', 'display-site-notification-bar' ),
 				[ __DIR__ ]
 			);
 		}
