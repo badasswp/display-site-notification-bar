@@ -47,42 +47,42 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_SECTION = 'site-notice-section';
+	const NOTICE_SECTION = 'site-notice-section';
 
 	/**
 	 * Site Notice Text.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_TEXT = 'text';
+	const NOTICE_TEXT = 'text';
 
 	/**
 	 * Site Notice Text Color.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_TEXT_COLOR = 'text_color';
+	const NOTICE_TEXT_COLOR = 'text_color';
 
 	/**
 	 * Site Notice Background Color.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_BACKGROUND_COLOR = 'background_color';
+	const NOTICE_BACKGROUND_COLOR = 'background_color';
 
 	/**
 	 * Site Notice Position.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_POSITION = 'position';
+	const NOTICE_POSITION = 'position';
 
 	/**
 	 * Site Notice Visbility.
 	 *
 	 * @var string
 	 */
-	const SITE_NOTICE_VISIBILITY = 'visibility';
+	const NOTICE_VISIBILITY = 'visibility';
 
 	/**
 	 * Bind to WP.
@@ -187,7 +187,7 @@ class Admin extends Service implements Kernel {
 	protected function get_sections(): array {
 		return [
 			[
-				'name'  => self::SITE_NOTICE_SECTION,
+				'name'  => self::NOTICE_SECTION,
 				'label' => __( 'Notice Bar Settings', 'display-site-notification-bar' ),
 			],
 		];
@@ -215,39 +215,39 @@ class Admin extends Service implements Kernel {
 	protected function get_options(): array {
 		$options = [
 			[
-				'name'    => self::SITE_NOTICE_TEXT,
+				'name'    => self::NOTICE_TEXT,
 				'label'   => __( 'Notice Text', 'display-site-notification-bar' ),
-				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_TEXT ) ],
+				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_TEXT ) ],
 				'page'    => self::PLUGIN_SLUG,
-				'section' => self::SITE_NOTICE_SECTION,
+				'section' => self::NOTICE_SECTION,
 			],
 			[
-				'name'    => self::SITE_NOTICE_TEXT_COLOR,
+				'name'    => self::NOTICE_TEXT_COLOR,
 				'label'   => __( 'Notice Text Color', 'display-site-notification-bar' ),
-				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_TEXT_COLOR ) ],
+				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_TEXT_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
-				'section' => self::SITE_NOTICE_SECTION,
+				'section' => self::NOTICE_SECTION,
 			],
 			[
-				'name'    => self::SITE_NOTICE_BACKGROUND_COLOR,
+				'name'    => self::NOTICE_BACKGROUND_COLOR,
 				'label'   => __( 'Notice Background Color', 'display-site-notification-bar' ),
-				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_BACKGROUND_COLOR ) ],
+				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_BACKGROUND_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
-				'section' => self::SITE_NOTICE_SECTION,
+				'section' => self::NOTICE_SECTION,
 			],
 			[
-				'name'    => self::SITE_NOTICE_POSITION,
+				'name'    => self::NOTICE_POSITION,
 				'label'   => __( 'Notice Position', 'display-site-notification-bar' ),
-				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_POSITION ) ],
+				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_POSITION ) ],
 				'page'    => self::PLUGIN_SLUG,
-				'section' => self::SITE_NOTICE_SECTION,
+				'section' => self::NOTICE_SECTION,
 			],
 			[
-				'name'    => self::SITE_NOTICE_VISIBILITY,
+				'name'    => self::NOTICE_VISIBILITY,
 				'label'   => __( 'Notice Visibility', 'display-site-notification-bar' ),
-				'cb'      => [ $this, $this->get_callback_name( self::SITE_NOTICE_VISIBILITY ) ],
+				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_VISIBILITY ) ],
 				'page'    => self::PLUGIN_SLUG,
-				'section' => self::SITE_NOTICE_SECTION,
+				'section' => self::NOTICE_SECTION,
 			],
 		];
 
@@ -279,8 +279,8 @@ class Admin extends Service implements Kernel {
 				placeholder="We use cookies on our site..."
 			>%3$s</textarea>',
 			esc_attr( self::PLUGIN_OPTION ),
-			esc_attr( self::SITE_NOTICE_TEXT ),
-			esc_attr( $this->options[ self::SITE_NOTICE_TEXT ] ?? '' )
+			esc_attr( self::NOTICE_TEXT ),
+			esc_attr( $this->options[ self::NOTICE_TEXT ] ?? '' )
 		);
 	}
 
@@ -301,8 +301,8 @@ class Admin extends Service implements Kernel {
 			   value="%3$s"
 		   />',
 			esc_attr( self::PLUGIN_OPTION ),
-			esc_attr( self::SITE_NOTICE_TEXT_COLOR ),
-			esc_attr( $this->options[ self::SITE_NOTICE_TEXT_COLOR ] ?? '' )
+			esc_attr( self::NOTICE_TEXT_COLOR ),
+			esc_attr( $this->options[ self::NOTICE_TEXT_COLOR ] ?? '' )
 		);
 	}
 
@@ -323,8 +323,8 @@ class Admin extends Service implements Kernel {
 				value="%3$s"
 			/>',
 			esc_attr( self::PLUGIN_OPTION ),
-			esc_attr( self::SITE_NOTICE_BACKGROUND_COLOR ),
-			esc_attr( $this->options[ self::SITE_NOTICE_BACKGROUND_COLOR ] ?? '' )
+			esc_attr( self::NOTICE_BACKGROUND_COLOR ),
+			esc_attr( $this->options[ self::NOTICE_BACKGROUND_COLOR ] ?? '' )
 		);
 	}
 
@@ -341,7 +341,7 @@ class Admin extends Service implements Kernel {
 		foreach ( [ 'top', 'bottom' ] as $position ) {
 			$selected = '';
 
-			if ( ( $this->options[ self::SITE_NOTICE_POSITION ] ?? '' ) === $position ) {
+			if ( ( $this->options[ self::NOTICE_POSITION ] ?? '' ) === $position ) {
 				$selected = 'selected';
 			}
 
@@ -359,8 +359,8 @@ class Admin extends Service implements Kernel {
 				value="%3$s"
 			>%4$s</select>',
 			esc_attr( self::PLUGIN_OPTION ),
-			esc_attr( self::SITE_NOTICE_POSITION ),
-			esc_attr( $this->options[ self::SITE_NOTICE_POSITION ] ?? '' ),
+			esc_attr( self::NOTICE_POSITION ),
+			esc_attr( $this->options[ self::NOTICE_POSITION ] ?? '' ),
 			$positions
 		);
 	}
@@ -378,7 +378,7 @@ class Admin extends Service implements Kernel {
 		foreach ( [ 'home', 'all' ] as $page ) {
 			$selected = '';
 
-			if ( ( $this->options[ self::SITE_NOTICE_VISIBILITY ] ?? '' ) === $page ) {
+			if ( ( $this->options[ self::NOTICE_VISIBILITY ] ?? '' ) === $page ) {
 				$selected = 'selected';
 			}
 
@@ -396,8 +396,8 @@ class Admin extends Service implements Kernel {
 				value="%3$s"
 			>%4$s</select>',
 			esc_attr( self::PLUGIN_OPTION ),
-			esc_attr( self::SITE_NOTICE_VISIBILITY ),
-			esc_attr( $this->options[ self::SITE_NOTICE_VISIBILITY ] ?? '' ),
+			esc_attr( self::NOTICE_VISIBILITY ),
+			esc_attr( $this->options[ self::NOTICE_VISIBILITY ] ?? '' ),
 			$pages
 		);
 	}
@@ -413,34 +413,34 @@ class Admin extends Service implements Kernel {
 	public function sanitize_options( $input ): array {
 		$sanitized_options = [];
 
-		if ( isset( $input[ self::SITE_NOTICE_TEXT ] ) ) {
-			$input_data = trim( (string) $input[ self::SITE_NOTICE_TEXT ] );
+		if ( isset( $input[ self::NOTICE_TEXT ] ) ) {
+			$input_data = trim( (string) $input[ self::NOTICE_TEXT ] );
 
-			$sanitized_options[ self::SITE_NOTICE_TEXT ] = sanitize_textarea_field( $input_data );
+			$sanitized_options[ self::NOTICE_TEXT ] = sanitize_textarea_field( $input_data );
 		}
 
-		if ( isset( $input[ self::SITE_NOTICE_TEXT_COLOR ] ) ) {
-			$input_data = trim( (string) $input[ self::SITE_NOTICE_TEXT_COLOR ] );
+		if ( isset( $input[ self::NOTICE_TEXT_COLOR ] ) ) {
+			$input_data = trim( (string) $input[ self::NOTICE_TEXT_COLOR ] );
 
-			$sanitized_options[ self::SITE_NOTICE_TEXT_COLOR ] = sanitize_text_field( $input_data );
+			$sanitized_options[ self::NOTICE_TEXT_COLOR ] = sanitize_text_field( $input_data );
 		}
 
-		if ( isset( $input[ self::SITE_NOTICE_BACKGROUND_COLOR ] ) ) {
-			$input_data = trim( (string) $input[ self::SITE_NOTICE_BACKGROUND_COLOR ] );
+		if ( isset( $input[ self::NOTICE_BACKGROUND_COLOR ] ) ) {
+			$input_data = trim( (string) $input[ self::NOTICE_BACKGROUND_COLOR ] );
 
-			$sanitized_options[ self::SITE_NOTICE_BACKGROUND_COLOR ] = sanitize_text_field( $input_data );
+			$sanitized_options[ self::NOTICE_BACKGROUND_COLOR ] = sanitize_text_field( $input_data );
 		}
 
-		if ( isset( $input[ self::SITE_NOTICE_POSITION ] ) ) {
-			$input_data = trim( (string) $input[ self::SITE_NOTICE_POSITION ] );
+		if ( isset( $input[ self::NOTICE_POSITION ] ) ) {
+			$input_data = trim( (string) $input[ self::NOTICE_POSITION ] );
 
-			$sanitized_options[ self::SITE_NOTICE_POSITION ] = sanitize_text_field( $input_data );
+			$sanitized_options[ self::NOTICE_POSITION ] = sanitize_text_field( $input_data );
 		}
 
-		if ( isset( $input[ self::SITE_NOTICE_VISIBILITY ] ) ) {
-			$input_data = trim( (string) $input[ self::SITE_NOTICE_VISIBILITY ] );
+		if ( isset( $input[ self::NOTICE_VISIBILITY ] ) ) {
+			$input_data = trim( (string) $input[ self::NOTICE_VISIBILITY ] );
 
-			$sanitized_options[ self::SITE_NOTICE_VISIBILITY ] = sanitize_text_field( $input_data );
+			$sanitized_options[ self::NOTICE_VISIBILITY ] = sanitize_text_field( $input_data );
 		}
 
 		return $sanitized_options;
@@ -457,34 +457,34 @@ class Admin extends Service implements Kernel {
 	public static function get_settings(): array {
 		$settings = get_option( self::PLUGIN_OPTION, [] );
 
-		if ( empty( $settings[ self::SITE_NOTICE_TEXT ] ) ) {
-			$settings[ self::SITE_NOTICE_TEXT ] = '';
+		if ( empty( $settings[ self::NOTICE_TEXT ] ) ) {
+			$settings[ self::NOTICE_TEXT ] = '';
 		}
 
-		if ( empty( $settings[ self::SITE_NOTICE_TEXT_COLOR ] ) ) {
-			$settings[ self::SITE_NOTICE_TEXT_COLOR ] = '#FFF';
+		if ( empty( $settings[ self::NOTICE_TEXT_COLOR ] ) ) {
+			$settings[ self::NOTICE_TEXT_COLOR ] = '#FFF';
 		}
 
-		if ( empty( $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ) ) {
-			$settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] = '#000';
+		if ( empty( $settings[ self::NOTICE_BACKGROUND_COLOR ] ) ) {
+			$settings[ self::NOTICE_BACKGROUND_COLOR ] = '#000';
 		}
 
-		if ( empty( $settings[ self::SITE_NOTICE_POSITION ] ) ) {
-			$settings[ self::SITE_NOTICE_POSITION ] = 'bottom';
+		if ( empty( $settings[ self::NOTICE_POSITION ] ) ) {
+			$settings[ self::NOTICE_POSITION ] = 'bottom';
 		}
 
-		if ( empty( $settings[ self::SITE_NOTICE_VISIBILITY ] ) ) {
-			$settings[ self::SITE_NOTICE_VISIBILITY ] = 'home';
+		if ( empty( $settings[ self::NOTICE_VISIBILITY ] ) ) {
+			$settings[ self::NOTICE_VISIBILITY ] = 'home';
 		}
 
 		return apply_filters(
 			'display_site_notification_bar_settings',
 			[
-				self::SITE_NOTICE_TEXT             => $settings[ self::SITE_NOTICE_TEXT ] ?? '',
-				self::SITE_NOTICE_TEXT_COLOR       => $settings[ self::SITE_NOTICE_TEXT_COLOR ] ?? '',
-				self::SITE_NOTICE_BACKGROUND_COLOR => $settings[ self::SITE_NOTICE_BACKGROUND_COLOR ] ?? '',
-				self::SITE_NOTICE_POSITION         => $settings[ self::SITE_NOTICE_POSITION ] ?? '',
-				self::SITE_NOTICE_VISIBILITY       => $settings[ self::SITE_NOTICE_VISIBILITY ] ?? '',
+				self::NOTICE_TEXT             => $settings[ self::NOTICE_TEXT ] ?? '',
+				self::NOTICE_TEXT_COLOR       => $settings[ self::NOTICE_TEXT_COLOR ] ?? '',
+				self::NOTICE_BACKGROUND_COLOR => $settings[ self::NOTICE_BACKGROUND_COLOR ] ?? '',
+				self::NOTICE_POSITION         => $settings[ self::NOTICE_POSITION ] ?? '',
+				self::NOTICE_VISIBILITY       => $settings[ self::NOTICE_VISIBILITY ] ?? '',
 			]
 		);
 	}
