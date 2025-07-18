@@ -45,10 +45,10 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'site_notification_bar', [] )
+			->with( 'display_site_notification_bar', [] )
 			->andReturn( $settings );
 
-		\WP_Mock::expectFilter( 'site_notification_bar_settings', $settings );
+		\WP_Mock::expectFilter( 'display_site_notification_bar_settings', $settings );
 
 		\WP_Mock::userFunction( 'is_home' )
 			->andReturn( true );
@@ -83,11 +83,11 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'site_notification_bar', [] )
+			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
 
 		\WP_Mock::expectFilter(
-			'site_notification_bar_settings',
+			'display_site_notification_bar_settings',
 			[
 				'text'             => '',
 				'text_color'       => '#FFF',
@@ -130,10 +130,10 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'site_notification_bar', [] )
+			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
 
-		\WP_Mock::onFilter( 'site_notification_bar_settings' )
+		\WP_Mock::onFilter( 'display_site_notification_bar_settings' )
 			->with(
 				[
 					'text'             => '',
@@ -186,11 +186,11 @@ class NoticeBarTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'site_notification_bar', [] )
+			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
 
 		\WP_Mock::expectFilter(
-			'site_notification_bar_settings',
+			'display_site_notification_bar_settings',
 			[
 				'text'             => '',
 				'text_color'       => '#FFF',

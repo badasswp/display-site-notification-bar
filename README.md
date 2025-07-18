@@ -12,12 +12,12 @@ This plugin makes it super easy to display a notifiction bar on the front-end. I
 
 ### Hooks
 
-#### `site_notification_bar_admin_fields`
+#### `display_site_notification_bar_admin_fields`
 
 This custom hook (filter) provides a way to filter the admin fields presented on the options page of the plugin.
 
 ```php
-add_filter( 'site_notification_bar_admin_fields', [ $this, 'custom_admin_fields' ] );
+add_filter( 'display_site_notification_bar_admin_fields', [ $this, 'custom_admin_fields' ] );
 
 public function custom_admin_fields( $fields ): array {
     $fields[] = [
@@ -37,12 +37,12 @@ public function custom_admin_fields( $fields ): array {
 - options _`{array}`_ By default this will be an array containing key, value options for the control.
 <br/>
 
-#### `site_notification_bar_settings`
+#### `display_site_notification_bar_settings`
 
 This custom hook (filter) provides a way to customise the settings used by the notification bar.
 
 ```php
-add_filter( 'site_notification_bar_settings', [ $this, 'custom_bar_settings' ] );
+add_filter( 'display_site_notification_bar_settings', [ $this, 'custom_bar_settings' ] );
 
 public function bar_settings( $settings ): array {
     $settings['site_notice_text'] = esc_html(

@@ -29,7 +29,7 @@ If you're looking for a plugin for displaying a notification bar on your home pa
 
 The plugin provides the following capabilities:
 
-✔️ <strong>Custom filters</strong>: `site_notification_bar_admin_fields` && `site_notification_bar_settings` for customising the Post & Meta options.
+✔️ <strong>Custom filters</strong>: `display_site_notification_bar_admin_fields` && `display_site_notification_bar_settings` for customising the Post & Meta options.
 ✔️ Available in <strong>mutiple langauges</strong> such as Arabic, Chinese, Hebrew, Hindi, Russian, German, Italian, Croatian, Spanish & French languages.
 ✔️ Super Fast and easy to work it.
 ✔️ <strong>Backward compatible</strong>, works with most WP versions.
@@ -59,7 +59,7 @@ Want to add your personal touch? All of our documentation can be found [here](ht
 
 = 1.0.0 =
 * Initial plugin release.
-* Add custom filters `site_notification_bar_admin_fields` && `site_notification_bar_settings` for customising the plugin options.
+* Add custom filters `display_site_notification_bar_admin_fields` && `display_site_notification_bar_settings` for customising the plugin options.
 * Add language translations.
 * Update README notes.
 * Tested up to WP 6.8.1

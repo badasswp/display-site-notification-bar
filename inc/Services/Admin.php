@@ -33,7 +33,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const PLUGIN_OPTION = 'site_notification_bar';
+	const PLUGIN_OPTION = 'display_site_notification_bar';
 
 	/**
 	 * Plugin Group.
@@ -259,7 +259,7 @@ class Admin extends Service implements Kernel {
 		 * @param mixed[] $options Option Fields.
 		 * @return mixed[]
 		 */
-		return apply_filters( 'site_notification_bar_admin_fields', $options );
+		return apply_filters( 'display_site_notification_bar_admin_fields', $options );
 	}
 
 	/**
@@ -478,7 +478,7 @@ class Admin extends Service implements Kernel {
 		}
 
 		return apply_filters(
-			'site_notification_bar_settings',
+			'display_site_notification_bar_settings',
 			[
 				self::SITE_NOTICE_TEXT             => $settings[ self::SITE_NOTICE_TEXT ] ?? '',
 				self::SITE_NOTICE_TEXT_COLOR       => $settings[ self::SITE_NOTICE_TEXT_COLOR ] ?? '',

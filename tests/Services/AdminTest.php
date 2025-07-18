@@ -68,7 +68,7 @@ class AdminTest extends TestCase {
 		$admin = new Admin();
 
 		\WP_Mock::userFunction( 'get_option' )
-			->with( 'site_notification_bar', [] )
+			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
 
 		\WP_Mock::userFunction( '_e' )
@@ -136,7 +136,7 @@ class AdminTest extends TestCase {
 		\WP_Mock::userFunction( 'register_setting' )
 			->with(
 				'site-notification-bar-group',
-				'site_notification_bar',
+				'display_site_notification_bar',
 				[ $admin, 'sanitize_options' ]
 			)
 			->andReturn( null );
@@ -152,7 +152,7 @@ class AdminTest extends TestCase {
 			->andReturn( null );
 
 		\WP_Mock::expectFilter(
-			'site_notification_bar_admin_fields',
+			'display_site_notification_bar_admin_fields',
 			[
 				[
 					'name'    => 'text',
@@ -285,7 +285,7 @@ class AdminTest extends TestCase {
 			);
 
 		\WP_Mock::expectFilter(
-			'site_notification_bar_admin_fields',
+			'display_site_notification_bar_admin_fields',
 			$options
 		);
 
@@ -306,7 +306,7 @@ class AdminTest extends TestCase {
 		$this->expectOutputString(
 			'<textarea
 				id="text"
-				name="site_notification_bar[text]"
+				name="display_site_notification_bar[text]"
 				rows="5"
 				cols="50"
 				placeholder="We use cookies on our site..."
