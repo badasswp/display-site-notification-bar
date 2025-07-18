@@ -47,7 +47,7 @@ class Admin extends Service implements Kernel {
 	 *
 	 * @var string
 	 */
-	const NOTICE_SECTION = 'site-notice-section';
+	const NOTICE_SECTION = 'display-site-notice-section';
 
 	/**
 	 * Site Notice Text.
