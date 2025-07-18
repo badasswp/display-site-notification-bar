@@ -1,4 +1,4 @@
-=== Site Notification Bar ===
+=== Display Site Notification Bar ===
 Contributors: badasswp
 Tags: site, notice, bar, home, page
 Requires at least: 4.0
@@ -13,10 +13,10 @@ Display a notice bar on your WP home page. It also allows you to customize how t
 == Installation ==
 
 1. Go to 'Plugins > Add New' on your WordPress admin dashboard.
-2. Search for 'Site Notification Bar' plugin from the official WordPress plugin repository.
+2. Search for 'Display Site Notification Bar' plugin from the official WordPress plugin repository.
 3. Click 'Install Now' and then 'Activate'.
-4. To get started, head over to the Site Notification Bar options page and configure your settings of choice.
-5. That's it! You're all set to start using the Site Notification Bar plugin.
+4. To get started, head over to the Display Site Notification Bar options page and configure your settings of choice.
+5. That's it! You're all set to start using the Display Site Notification Bar plugin.
 6. Head over to your home page to see your notification bar in place.
 
 == Description ==
@@ -36,9 +36,9 @@ The plugin provides the following capabilities:
 
 = ✨ Getting Started =
 
-1. To get started, head over to the Site Notification Bar options page and configure your settings of choice.
+1. To get started, head over to the Display Site Notification Bar options page and configure your settings of choice.
 
-2. That's it! You're all set to start using the Site Notification Bar plugin.
+2. That's it! You're all set to start using the Display Site Notification Bar plugin.
 
 3. Head over to your home page to see your notification bar in place.
 
@@ -46,7 +46,7 @@ You can get a taste of how this plugin works, by using the [demo](https://tastew
 
 = 🔌🎨 Plug and Play or Customize =
 
-The Site Notification Bar plugin is built to work right out of the box. Simply install, activate and start using.
+The Display Site Notification Bar plugin is built to work right out of the box. Simply install, activate and start using.
 
 Want to add your personal touch? All of our documentation can be found [here](https://github.com/badasswp/site-notification-bar). You can override the plugin's behaviour with custom logic of your own using [hooks](https://github.com/badasswp/site-notification-bar?tab=readme-ov-file#hooks).
 

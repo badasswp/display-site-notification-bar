@@ -48,8 +48,8 @@ class AdminTest extends TestCase {
 
 		\WP_Mock::userFunction( 'add_menu_page' )
 			->with(
-				'Site Notification Bar',
-				'Site Notification Bar',
+				'Display Site Notification Bar',
+				'Display Site Notification Bar',
 				'manage_options',
 				'site-notification-bar',
 				[ $admin, 'register_options_cb' ],
@@ -109,7 +109,7 @@ class AdminTest extends TestCase {
 
 		$this->expectOutputString(
 			'		<div class="wrap">
-			<h1>Site Notification Bar</h1>
+			<h1>Display Site Notification Bar</h1>
 			<p>Display a notice bar on your WP home page.</p>
 			<form method="post" action="options.php">
 								<section id="site-notification-bar-group"></section>

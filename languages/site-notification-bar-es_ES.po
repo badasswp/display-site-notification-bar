@@ -3,7 +3,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Site Notification Bar\n"
+"Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
 "PO-Revision-Date: 2025-07-12 12:10+0100\n"
 "Last-Translator: \n"
@@ -25,8 +25,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: vendor\n"
 
 #. Plugin Name of the plugin/theme
-#. Site Notification Bar
-msgid "Site Notification Bar"
+#. Display Site Notification Bar
+msgid "Display Site Notification Bar"
 msgstr "Barra de notificaciones del sitio"
 
 #. Description of the plugin/theme

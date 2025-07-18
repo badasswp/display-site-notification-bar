@@ -105,8 +105,8 @@ class Admin extends Service implements Kernel {
 	 */
 	public function register_options_page(): void {
 		add_menu_page(
-			__( 'Site Notification Bar', 'site-notification-bar' ),
-			__( 'Site Notification Bar', 'site-notification-bar' ),
+			__( 'Display Site Notification Bar', 'site-notification-bar' ),
+			__( 'Display Site Notification Bar', 'site-notification-bar' ),
 			'manage_options',
 			self::PLUGIN_SLUG,
 			[ $this, 'register_options_cb' ],
@@ -126,7 +126,7 @@ class Admin extends Service implements Kernel {
 		$this->options = get_option( self::PLUGIN_OPTION, [] );
 		?>
 		<div class="wrap">
-			<h1><?php _e( 'Site Notification Bar', 'site-notification-bar' ); ?></h1>
+			<h1><?php _e( 'Display Site Notification Bar', 'site-notification-bar' ); ?></h1>
 			<p><?php _e( 'Display a notice bar on your WP home page.', 'site-notification-bar' ); ?></p>
 			<form method="post" action="options.php">
 			<?php

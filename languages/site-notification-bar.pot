@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Site Notification Bar\n"
+"Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
 "PO-Revision-Date: 2025-01-11 11:40+0100\n"
 "Last-Translator: \n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: vendor\n"
 
 #. Plugin Name of the plugin/theme
-msgid "Site Notification Bar"
+msgid "Display Site Notification Bar"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -49,8 +49,8 @@ msgstr ""
 msgid "Fatal Error: Composer not setup in %s"
 msgstr ""
 
-#. Site Notification Bar
-msgid "Site Notification Bar"
+#. Display Site Notification Bar
+msgid "Display Site Notification Bar"
 msgstr ""
 
 #. Notice Bar Settings
