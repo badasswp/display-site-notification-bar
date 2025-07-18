@@ -149,7 +149,7 @@ class AdminTest extends TestCase {
 		\WP_Mock::userFunction( 'add_settings_section' )
 			->once()
 			->with(
-				'site-notice-section',
+				'display-site-notice-section',
 				'Notice Bar Settings',
 				null,
 				'display-site-notification-bar'
@@ -164,35 +164,35 @@ class AdminTest extends TestCase {
 					'label'   => 'Notice Text',
 					'cb'      => [ $admin, 'text_cb' ],
 					'page'    => 'display-site-notification-bar',
-					'section' => 'site-notice-section',
+					'section' => 'display-site-notice-section',
 				],
 				[
 					'name'    => 'text_color',
 					'label'   => 'Notice Text Color',
 					'cb'      => [ $admin, 'text_color_cb' ],
 					'page'    => 'display-site-notification-bar',
-					'section' => 'site-notice-section',
+					'section' => 'display-site-notice-section',
 				],
 				[
 					'name'    => 'background_color',
 					'label'   => 'Notice Background Color',
 					'cb'      => [ $admin, 'background_color_cb' ],
 					'page'    => 'display-site-notification-bar',
-					'section' => 'site-notice-section',
+					'section' => 'display-site-notice-section',
 				],
 				[
 					'name'    => 'position',
 					'label'   => 'Notice Position',
 					'cb'      => [ $admin, 'position_cb' ],
 					'page'    => 'display-site-notification-bar',
-					'section' => 'site-notice-section',
+					'section' => 'display-site-notice-section',
 				],
 				[
 					'name'    => 'visibility',
 					'label'   => 'Notice Visibility',
 					'cb'      => [ $admin, 'visibility_cb' ],
 					'page'    => 'display-site-notification-bar',
-					'section' => 'site-notice-section',
+					'section' => 'display-site-notice-section',
 				],
 			]
 		);
@@ -223,7 +223,7 @@ class AdminTest extends TestCase {
 			$sections,
 			[
 				[
-					'name'  => 'site-notice-section',
+					'name'  => 'display-site-notice-section',
 					'label' => 'Notice Bar Settings',
 				],
 			]
@@ -250,35 +250,35 @@ class AdminTest extends TestCase {
 				'label'   => 'Notice Text',
 				'cb'      => [ $admin, 'text_cb' ],
 				'page'    => 'display-site-notification-bar',
-				'section' => 'site-notice-section',
+				'section' => 'display-site-notice-section',
 			],
 			[
 				'name'    => 'text_color',
 				'label'   => 'Notice Text Color',
 				'cb'      => [ $admin, 'text_color_cb' ],
 				'page'    => 'display-site-notification-bar',
-				'section' => 'site-notice-section',
+				'section' => 'display-site-notice-section',
 			],
 			[
 				'name'    => 'background_color',
 				'label'   => 'Notice Background Color',
 				'cb'      => [ $admin, 'background_color_cb' ],
 				'page'    => 'display-site-notification-bar',
-				'section' => 'site-notice-section',
+				'section' => 'display-site-notice-section',
 			],
 			[
 				'name'    => 'position',
 				'label'   => 'Notice Position',
 				'cb'      => [ $admin, 'position_cb' ],
 				'page'    => 'display-site-notification-bar',
-				'section' => 'site-notice-section',
+				'section' => 'display-site-notice-section',
 			],
 			[
 				'name'    => 'visibility',
 				'label'   => 'Notice Visibility',
 				'cb'      => [ $admin, 'visibility_cb' ],
 				'page'    => 'display-site-notification-bar',
-				'section' => 'site-notice-section',
+				'section' => 'display-site-notice-section',
 			],
 		];
 
@@ -407,5 +407,72 @@ class AdminTest extends TestCase {
 		);
 		$this->assertNull( $response );
 		$this->assertConditionsMet();
+	}
+
+	public function test_get_settings_uses_default_values_if_plugin_options_not_set() {
+		\WP_Mock::userFunction( 'get_option' )
+			->with( 'display_site_notification_bar', [] )
+			->andReturn( [] );
+
+		\WP_Mock::expectFilter(
+			'display_site_notification_bar_settings',
+			[
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#000',
+				'position'         => 'bottom',
+				'visibility'       => 'home',
+			]
+		);
+
+		$response = Admin::get_settings();
+
+		$this->assertSame(
+			$response,
+			[
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#000',
+				'position'         => 'bottom',
+				'visibility'       => 'home',
+			]
+		);
+	}
+
+	public function test_get_settings_returns_plugin_options_if_set() {
+		\WP_Mock::userFunction( 'get_option' )
+			->with( 'display_site_notification_bar', [] )
+			->andReturn(
+				[
+					'text'             => '',
+					'background_color' => '#F00',
+					'position'         => 'top',
+					'visibility'       => 'all',
+				]
+			);
+
+		\WP_Mock::expectFilter(
+			'display_site_notification_bar_settings',
+			[
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#F00',
+				'position'         => 'top',
+				'visibility'       => 'all',
+			]
+		);
+
+		$response = Admin::get_settings();
+
+		$this->assertSame(
+			$response,
+			[
+				'text'             => '',
+				'text_color'       => '#FFF',
+				'background_color' => '#F00',
+				'position'         => 'top',
+				'visibility'       => 'all',
+			]
+		);
 	}
 }
