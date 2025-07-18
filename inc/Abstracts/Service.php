@@ -5,12 +5,12 @@
  * This abstraction defines the base logic from which all
  * Service classes are derived.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Abstracts;
+namespace DisplaySiteNotificationBar\Abstracts;
 
-use SiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
 
 abstract class Service implements Kernel {
 	/**

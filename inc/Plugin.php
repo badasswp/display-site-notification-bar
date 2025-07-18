@@ -4,12 +4,12 @@
  *
  * Load the plugin and register the services.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar;
+namespace DisplaySiteNotificationBar;
 
-use SiteNotificationBar\Core\Container;
+use DisplaySiteNotificationBar\Core\Container;
 
 class Plugin {
 	/**

@@ -1,14 +1,14 @@
 <?php
 
-namespace SiteNotificationBar\Tests;
+namespace DisplaySiteNotificationBar\Tests;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Plugin;
-use SiteNotificationBar\Abstracts\Kernel;
+use DisplaySiteNotificationBar\Plugin;
+use DisplaySiteNotificationBar\Abstracts\Kernel;
 
 /**
- * @covers \SiteNotificationBar\Plugin::get_instance
+ * @covers \DisplaySiteNotificationBar\Plugin::get_instance
  */
 class PluginTest extends TestCase {
 	public function setUp(): void {

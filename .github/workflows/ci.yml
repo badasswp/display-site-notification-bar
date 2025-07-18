@@ -1,4 +1,4 @@
-name: SiteNotificationBar CI
+name: DisplaySiteNotificationBar CI
 
 on:
     push:

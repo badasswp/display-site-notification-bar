@@ -1,14 +1,14 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Services;
+namespace DisplaySiteNotificationBar\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Services\Asset;
+use DisplaySiteNotificationBar\Services\Asset;
 
 /**
- * @covers \SiteNotificationBar\Services\Asset::register
- * @covers \SiteNotificationBar\Services\Asset::enqueue_frontend_assets
+ * @covers \DisplaySiteNotificationBar\Services\Asset::register
+ * @covers \DisplaySiteNotificationBar\Services\Asset::enqueue_frontend_assets
  */
 class AssetTest extends TestCase {
 	public function setUp(): void {

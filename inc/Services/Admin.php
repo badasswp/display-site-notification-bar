@@ -5,13 +5,13 @@
  * This service manages the admin area of the
  * plugin. It registers the plugin option settings.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Services;
+namespace DisplaySiteNotificationBar\Services;
 
-use SiteNotificationBar\Abstracts\Service;
-use SiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Abstracts\Service;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
 
 class Admin extends Service implements Kernel {
 	/**

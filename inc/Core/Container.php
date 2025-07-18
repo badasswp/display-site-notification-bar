@@ -5,15 +5,15 @@
  * This class is responsible for registering the
  * plugin's services.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Core;
+namespace DisplaySiteNotificationBar\Core;
 
-use SiteNotificationBar\Interfaces\Kernel;
-use SiteNotificationBar\Services\Asset;
-use SiteNotificationBar\Services\NoticeBar;
-use SiteNotificationBar\Services\Admin;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Services\Asset;
+use DisplaySiteNotificationBar\Services\NoticeBar;
+use DisplaySiteNotificationBar\Services\Admin;
 
 class Container implements Kernel {
 	/**

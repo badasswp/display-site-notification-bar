@@ -5,13 +5,13 @@
  * This service manages the asset service
  * that loads styles and scripts.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Services;
+namespace DisplaySiteNotificationBar\Services;
 
-use SiteNotificationBar\Abstracts\Service;
-use SiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Abstracts\Service;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
 
 class Asset extends Service implements Kernel {
 	/**

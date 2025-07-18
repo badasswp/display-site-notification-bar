@@ -1,16 +1,16 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Services;
+namespace DisplaySiteNotificationBar\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Services\NoticeBar;
-use SiteNotificationBar\Services\Admin;
+use DisplaySiteNotificationBar\Services\NoticeBar;
+use DisplaySiteNotificationBar\Services\Admin;
 
 /**
- * @covers \SiteNotificationBar\Services\NoticeBar::register
- * @covers \SiteNotificationBar\Services\NoticeBar::display_notice_bar
- * @covers \SiteNotificationBar\Services\Admin::get_settings
+ * @covers \DisplaySiteNotificationBar\Services\NoticeBar::register
+ * @covers \DisplaySiteNotificationBar\Services\NoticeBar::display_notice_bar
+ * @covers \DisplaySiteNotificationBar\Services\Admin::get_settings
  */
 class NoticeBarTest extends TestCase {
 	public function setUp(): void {

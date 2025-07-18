@@ -1,13 +1,13 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Abstracts;
+namespace DisplaySiteNotificationBar\Tests\Abstracts;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Abstracts\Service;
+use DisplaySiteNotificationBar\Abstracts\Service;
 
 /**
- * @covers \SiteNotificationBar\Abstracts\Service::get_instance
+ * @covers \DisplaySiteNotificationBar\Abstracts\Service::get_instance
  */
 class ServiceTest extends TestCase {
 	public function setUp(): void {

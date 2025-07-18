@@ -5,8 +5,8 @@
 	"license": "GPL-2.0-or-later",
 	"autoload": {
 		"psr-4": {
-			"SiteNotificationBar\\": "inc/",
-			"SiteNotificationBar\\Tests\\": "tests/"
+			"DisplaySiteNotificationBar\\": "inc/",
+			"DisplaySiteNotificationBar\\Tests\\": "tests/"
 		}
 	},
 	"authors": [

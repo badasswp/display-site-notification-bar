@@ -1,15 +1,15 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Core;
+namespace DisplaySiteNotificationBar\Tests\Core;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Core\Container;
-use SiteNotificationBar\Services\Admin;
+use DisplaySiteNotificationBar\Core\Container;
+use DisplaySiteNotificationBar\Services\Admin;
 
 /**
- * @covers \SiteNotificationBar\Core\Container::__construct
- * @covers \SiteNotificationBar\Services\Admin::register
+ * @covers \DisplaySiteNotificationBar\Core\Container::__construct
+ * @covers \DisplaySiteNotificationBar\Services\Admin::register
  */
 class ContainerTest extends TestCase {
 	public Container $container;

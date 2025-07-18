@@ -1,8 +1,8 @@
-name: SiteNotificationBar Build
+name: DisplaySiteNotificationBar Build
 
 on:
   workflow_run:
-    workflows: ["SiteNotificationBar CI"]
+    workflows: ["DisplaySiteNotificationBar CI"]
     types: [completed]
     branches: [master]
 

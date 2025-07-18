@@ -1,19 +1,19 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Services;
+namespace DisplaySiteNotificationBar\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Services\Admin;
+use DisplaySiteNotificationBar\Services\Admin;
 
 /**
- * @covers \SiteNotificationBar\Services\Admin::register
- * @covers \SiteNotificationBar\Services\Admin::register_options_page
- * @covers \SiteNotificationBar\Services\Admin::register_options_cb
- * @covers \SiteNotificationBar\Services\Admin::register_options_init
- * @covers \SiteNotificationBar\Services\Admin::get_sections
- * @covers \SiteNotificationBar\Services\Admin::get_callback_name
- * @covers \SiteNotificationBar\Services\Admin::get_options
+ * @covers \DisplaySiteNotificationBar\Services\Admin::register
+ * @covers \DisplaySiteNotificationBar\Services\Admin::register_options_page
+ * @covers \DisplaySiteNotificationBar\Services\Admin::register_options_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::register_options_init
+ * @covers \DisplaySiteNotificationBar\Services\Admin::get_sections
+ * @covers \DisplaySiteNotificationBar\Services\Admin::get_callback_name
+ * @covers \DisplaySiteNotificationBar\Services\Admin::get_options
  */
 class AdminTest extends TestCase {
 	public function setUp(): void {

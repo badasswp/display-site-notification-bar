@@ -11,10 +11,10 @@
  * Text Domain: site-notification-bar
  * Domain Path: /languages
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace badasswp\SiteNotificationBar;
+namespace badasswp\DisplaySiteNotificationBar;
 
 if ( ! defined( 'WPINC' ) ) {
 	exit;
@@ -40,4 +40,4 @@ if ( ! file_exists( SITE_NOTIFICATION_BAR_AUTOLOAD ) ) {
 
 // Run Plugin.
 require_once SITE_NOTIFICATION_BAR_AUTOLOAD;
-( \SiteNotificationBar\Plugin::get_instance() )->run();
+( \DisplaySiteNotificationBar\Plugin::get_instance() )->run();

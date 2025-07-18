@@ -5,10 +5,10 @@
  * Establish base methods for Concrete services
  * used across plugin.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Interfaces;
+namespace DisplaySiteNotificationBar\Interfaces;
 
 interface Kernel {
 	/**

@@ -1,13 +1,13 @@
 <?php
 
-namespace SiteNotificationBar\Tests\Interfaces;
+namespace DisplaySiteNotificationBar\Tests\Interfaces;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use SiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
 
 /**
- * @covers \SiteNotificationBar\Interfaces\Kernel::register
+ * @covers \DisplaySiteNotificationBar\Interfaces\Kernel::register
  */
 class KernelTest extends TestCase {
 	public Kernel $kernel;

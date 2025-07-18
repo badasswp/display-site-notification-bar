@@ -5,14 +5,14 @@
  * This service manages the registration and
  * binding of the NoticeBar service.
  *
- * @package SiteNotificationBar
+ * @package DisplaySiteNotificationBar
  */
 
-namespace SiteNotificationBar\Services;
+namespace DisplaySiteNotificationBar\Services;
 
-use SiteNotificationBar\Services\Admin;
-use SiteNotificationBar\Abstracts\Service;
-use SiteNotificationBar\Interfaces\Kernel;
+use DisplaySiteNotificationBar\Services\Admin;
+use DisplaySiteNotificationBar\Abstracts\Service;
+use DisplaySiteNotificationBar\Interfaces\Kernel;
 
 class NoticeBar extends Service implements Kernel {
 	/**

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="SiteNotificationBar">
+<ruleset name="DisplaySiteNotificationBar">
 	<rule ref="WordPress-Core">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
