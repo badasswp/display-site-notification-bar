@@ -14,6 +14,11 @@ use DisplaySiteNotificationBar\Services\Admin;
  * @covers \DisplaySiteNotificationBar\Services\Admin::get_sections
  * @covers \DisplaySiteNotificationBar\Services\Admin::get_callback_name
  * @covers \DisplaySiteNotificationBar\Services\Admin::get_options
+ * @covers \DisplaySiteNotificationBar\Services\Admin::text_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::text_color_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::background_color_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::position_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::visibility_cb
  */
 class AdminTest extends TestCase {
 	public function setUp(): void {
@@ -311,6 +316,94 @@ class AdminTest extends TestCase {
 				cols="50"
 				placeholder="We use cookies on our site..."
 			></textarea>'
+		);
+		$this->assertNull( $response );
+		$this->assertConditionsMet();
+	}
+
+	public function test_text_color_cb() {
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		$response = ( new Admin() )->text_color_cb();
+
+		$this->expectOutputString(
+			'<input
+			   type="text"
+			   id="text_color"
+			   name="display_site_notification_bar[text_color]"
+			   placeholder="#FFF"
+			   value=""
+		   />'
+		);
+		$this->assertNull( $response );
+		$this->assertConditionsMet();
+	}
+
+	public function test_background_color_cb() {
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		$response = ( new Admin() )->background_color_cb();
+
+		$this->expectOutputString(
+			'<input
+				type="text"
+				id="background_color"
+				name="display_site_notification_bar[background_color]"
+				placeholder="#000"
+				value=""
+			/>'
+		);
+		$this->assertNull( $response );
+		$this->assertConditionsMet();
+	}
+
+	public function test_position_cb() {
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		$response = ( new Admin() )->position_cb();
+
+		$this->expectOutputString(
+			'<select
+				id="position"
+				name="display_site_notification_bar[position]"
+				value=""
+			><option value="top" >top</option><option value="bottom" >bottom</option></select>'
+		);
+		$this->assertNull( $response );
+		$this->assertConditionsMet();
+	}
+
+	public function test_visibility_cb() {
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		$response = ( new Admin() )->visibility_cb();
+
+		$this->expectOutputString(
+			'<select
+				id="visibility"
+				name="display_site_notification_bar[visibility]"
+				value=""
+			><option value="home" >home</option><option value="all" >all</option></select>'
 		);
 		$this->assertNull( $response );
 		$this->assertConditionsMet();
