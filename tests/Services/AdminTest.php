@@ -475,4 +475,32 @@ class AdminTest extends TestCase {
 			]
 		);
 	}
+
+	public function test_sanitize_options_does_not_sanitize_any_control_if_not_set() {
+		$sanitized_options = ( new Admin() )->sanitize_options( [] );
+
+		$this->assertSame( $sanitized_options, [] );
+		$this->assertConditionsMet();
+	}
+
+	public function test_sanitize_options_sanitizes_only_controls_that_are_set() {
+		\WP_Mock::userFunction( 'sanitize_textarea_field' )
+			->andReturnUsing( function( $arg ) {
+				return $arg;
+			} );
+
+		$sanitized_options = ( new Admin() )->sanitize_options(
+			[
+				'text' => 'Lorem ipsum dolor sit amet...'
+			]
+		);
+
+		$this->assertSame(
+			$sanitized_options,
+			[
+				'text' => 'Lorem ipsum dolor sit amet...'
+			]
+		);
+		$this->assertConditionsMet();
+	}
 }
