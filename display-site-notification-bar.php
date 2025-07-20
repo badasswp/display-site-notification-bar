@@ -20,10 +20,10 @@ if ( ! defined( 'WPINC' ) ) {
 	exit;
 }
 
-define( 'SITE_NOTIFICATION_BAR_AUTOLOAD', __DIR__ . '/vendor/autoload.php' );
+define( 'DISPLAY_SITE_NOTIFICATION_BAR_AUTOLOAD', __DIR__ . '/vendor/autoload.php' );
 
 // Composer Check.
-if ( ! file_exists( SITE_NOTIFICATION_BAR_AUTOLOAD ) ) {
+if ( ! file_exists( DISPLAY_SITE_NOTIFICATION_BAR_AUTOLOAD ) ) {
 	add_action(
 		'admin_notices',
 		function () {
@@ -39,5 +39,5 @@ if ( ! file_exists( SITE_NOTIFICATION_BAR_AUTOLOAD ) ) {
 }
 
 // Run Plugin.
-require_once SITE_NOTIFICATION_BAR_AUTOLOAD;
+require_once DISPLAY_SITE_NOTIFICATION_BAR_AUTOLOAD;
 ( \DisplaySiteNotificationBar\Plugin::get_instance() )->run();
