@@ -20,6 +20,7 @@ use DisplaySiteNotificationBar\Services\Admin;
  * @covers \DisplaySiteNotificationBar\Services\Admin::position_cb
  * @covers \DisplaySiteNotificationBar\Services\Admin::visibility_cb
  * @covers \DisplaySiteNotificationBar\Services\Admin::sanitize_options
+ * @covers \DisplaySiteNotificationBar\Services\Admin::get_settings
  */
 class AdminTest extends TestCase {
 	public function setUp(): void {
