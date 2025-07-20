@@ -19,6 +19,7 @@ use DisplaySiteNotificationBar\Services\Admin;
  * @covers \DisplaySiteNotificationBar\Services\Admin::background_color_cb
  * @covers \DisplaySiteNotificationBar\Services\Admin::position_cb
  * @covers \DisplaySiteNotificationBar\Services\Admin::visibility_cb
+ * @covers \DisplaySiteNotificationBar\Services\Admin::sanitize_options
  */
 class AdminTest extends TestCase {
 	public function setUp(): void {
