@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
-"PO-Revision-Date: 2025-07-12 12:14+0100\n"
+"PO-Revision-Date: 2025-07-20 11:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: da_DK\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,11 +27,11 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #. Display Site Notification Bar
 msgid "Display Site Notification Bar"
-msgstr "Display Site Notification Bar"
+msgstr "Site-Benachrichtigungsleiste"
 
 #. Description of the plugin/theme
 msgid "Display a notice bar on your WP home page."
-msgstr "Vis en meddelelseslinje på din WP-startside."
+msgstr "Zeigen Sie auf Ihrer WP-Startseite eine Hinweisleiste an."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/display-site-notification-bar"
@@ -47,32 +47,32 @@ msgstr "https://github.com/badasswp"
 
 #. Fatal Error: Composer not setup in %s
 msgid "Fatal Error: Composer not setup in %s"
-msgstr "Fatal fejl: Composer ikke konfigureret i %s"
+msgstr "Schwerwiegender Fehler: Composer nicht in %s eingerichtet"
 
 #. Notice Bar Settings
 msgid "Notice Bar Settings"
-msgstr "Indstillinger for meddelelseslinje"
+msgstr "Einstellungen der Hinweisleiste"
 
 #. Notice Text
 msgid "Notice Text"
-msgstr "Bemærkningstekst"
+msgstr "Hinweistext"
 
 #. Notice Text Color
 msgid "Notice Text Color"
-msgstr "Bemærk tekstfarve"
+msgstr "Beachten Sie die Textfarbe"
 
 #. Notice Background Color
 msgid "Notice Background Color"
-msgstr "Bemærk baggrundsfarve"
+msgstr "Beachten Sie die Hintergrundfarbe"
 
 #. Notice Position
 msgid "Notice Position"
-msgstr "Bemærk Position"
+msgstr "Bekanntmachungsposition"
 
 #. Notice Visibility
 msgid "Notice Visibility"
-msgstr "Bemærk Synlighed"
+msgstr "Beachten Sie die Sichtbarkeit"
 
 #. Notice Active
 msgid "Notice Active"
-msgstr "Bemærk aktiv"
+msgstr "Hinweis Aktiv"

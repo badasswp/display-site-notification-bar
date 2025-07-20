@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
-"PO-Revision-Date: 2025-07-12 11:46+0100\n"
+"PO-Revision-Date: 2025-07-20 11:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: zh_CN\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,11 +27,11 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #. Display Site Notification Bar
 msgid "Display Site Notification Bar"
-msgstr "站点通知栏"
+msgstr "Barra de notificaciones del sitio"
 
 #. Description of the plugin/theme
 msgid "Display a notice bar on your WP home page."
-msgstr "在您的 WP 主页上显示通知栏。"
+msgstr "Muestra una barra de notificaciones en tu página de inicio de WP."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/display-site-notification-bar"
@@ -47,32 +47,32 @@ msgstr "https://github.com/badasswp"
 
 #. Fatal Error: Composer not setup in %s
 msgid "Fatal Error: Composer not setup in %s"
-msgstr "致命错误：%s 中未设置 Composer"
+msgstr "Error fatal: Composer no está configurado en %s"
 
 #. Notice Bar Settings
 msgid "Notice Bar Settings"
-msgstr "通知栏设置"
+msgstr "Configuración de la barra de avisos"
 
 #. Notice Text
 msgid "Notice Text"
-msgstr "通知文字"
+msgstr "Texto de aviso"
 
 #. Notice Text Color
 msgid "Notice Text Color"
-msgstr "注意文字颜色"
+msgstr "Aviso Color del texto"
 
 #. Notice Background Color
 msgid "Notice Background Color"
-msgstr "注意背景颜色"
+msgstr "Color de fondo del aviso"
 
 #. Notice Position
 msgid "Notice Position"
-msgstr "公告位置"
+msgstr "Posición de aviso"
 
 #. Notice Visibility
 msgid "Notice Visibility"
-msgstr "通知可见性"
+msgstr "Visibilidad del aviso"
 
 #. Notice Active
 msgid "Notice Active"
-msgstr "通知激活"
+msgstr "Aviso activo"

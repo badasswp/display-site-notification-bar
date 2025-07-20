@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
-"PO-Revision-Date: 2025-07-12 11:35+0100\n"
+"PO-Revision-Date: 2025-07-20 11:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: hr\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,52 +27,52 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #. Display Site Notification Bar
 msgid "Display Site Notification Bar"
-msgstr "Traka obavijesti stranice"
+msgstr "شريط إعلام الموقع"
 
 #. Description of the plugin/theme
 msgid "Display a notice bar on your WP home page."
-msgstr "Prikažite traku s obavijestima na svojoj WP početnoj stranici."
+msgstr "عرض شريط الإشعارات على الصفحة الرئيسية لموقع WP الخاص بك."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/display-site-notification-bar"
-msgstr "https://github.com/badasswp/display-site-notification-bar"
+msgstr "‫https://github.com/badasswp/display-site-notification-bar"
 
 #. Author of the plugin/theme
 msgid "badasswp"
-msgstr "badasswp"
+msgstr "‫badasswp"
 
 #. Author URI of the plugin/theme
 msgid "https://github.com/badasswp"
-msgstr "https://github.com/badasswp"
+msgstr "‫https://github.com/badasswp"
 
 #. Fatal Error: Composer not setup in %s
 msgid "Fatal Error: Composer not setup in %s"
-msgstr "Fatalna greška: Skladatelj nije postavljen u %s"
+msgstr "خطأ فادح: لم يتم إعداد الملحن في %s"
 
 #. Notice Bar Settings
 msgid "Notice Bar Settings"
-msgstr "Postavke trake obavijesti"
+msgstr "إعدادات شريط الإشعارات"
 
 #. Notice Text
 msgid "Notice Text"
-msgstr "Tekst obavijesti"
+msgstr "نص الإشعار"
 
 #. Notice Text Color
 msgid "Notice Text Color"
-msgstr "Boja teksta obavijesti"
+msgstr "إشعار لون النص"
 
 #. Notice Background Color
 msgid "Notice Background Color"
-msgstr "Obavijest o boji pozadine"
+msgstr "لاحظ لون الخلفية"
 
 #. Notice Position
 msgid "Notice Position"
-msgstr "Obavijest o poziciji"
+msgstr "موقف الإشعار"
 
 #. Notice Visibility
 msgid "Notice Visibility"
-msgstr "Vidljivost obavijesti"
+msgstr "إشعار الرؤية"
 
 #. Notice Active
 msgid "Notice Active"
-msgstr "Obavijest aktivna"
+msgstr "إشعار نشط"
