@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Display Site Notification Bar\n"
 "POT-Creation-Date: 2025-01-11 11:40+0100\n"
-"PO-Revision-Date: 2025-07-20 11:47+0100\n"
+"PO-Revision-Date: 2025-07-24 07:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -27,7 +27,7 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #. Display Site Notification Bar
 msgid "Display Site Notification Bar"
-msgstr "Traka obavijesti stranice"
+msgstr "Prikaz trake s obavijestima web-mjesta"
 
 #. Description of the plugin/theme
 msgid "Display a notice bar on your WP home page."
