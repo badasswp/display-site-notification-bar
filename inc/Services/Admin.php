@@ -105,8 +105,8 @@ class Admin extends Service implements Kernel {
 	 */
 	public function register_options_page(): void {
 		add_menu_page(
-			__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
-			__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
+			esc_html__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
+			esc_html__( 'Display Site Notification Bar', 'display-site-notification-bar' ),
 			'manage_options',
 			self::PLUGIN_SLUG,
 			[ $this, 'register_options_cb' ],
@@ -216,35 +216,35 @@ class Admin extends Service implements Kernel {
 		$options = [
 			[
 				'name'    => self::NOTICE_TEXT,
-				'label'   => __( 'Notice Text', 'display-site-notification-bar' ),
+				'label'   => esc_html__( 'Notice Text', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_TEXT ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::NOTICE_SECTION,
 			],
 			[
 				'name'    => self::NOTICE_TEXT_COLOR,
-				'label'   => __( 'Notice Text Color', 'display-site-notification-bar' ),
+				'label'   => esc_html__( 'Notice Text Color', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_TEXT_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::NOTICE_SECTION,
 			],
 			[
 				'name'    => self::NOTICE_BACKGROUND_COLOR,
-				'label'   => __( 'Notice Background Color', 'display-site-notification-bar' ),
+				'label'   => esc_html__( 'Notice Background Color', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_BACKGROUND_COLOR ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::NOTICE_SECTION,
 			],
 			[
 				'name'    => self::NOTICE_POSITION,
-				'label'   => __( 'Notice Position', 'display-site-notification-bar' ),
+				'label'   => esc_html__( 'Notice Position', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_POSITION ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::NOTICE_SECTION,
 			],
 			[
 				'name'    => self::NOTICE_VISIBILITY,
-				'label'   => __( 'Notice Visibility', 'display-site-notification-bar' ),
+				'label'   => esc_html__( 'Notice Visibility', 'display-site-notification-bar' ),
 				'cb'      => [ $this, $this->get_callback_name( self::NOTICE_VISIBILITY ) ],
 				'page'    => self::PLUGIN_SLUG,
 				'section' => self::NOTICE_SECTION,
