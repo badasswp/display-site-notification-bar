@@ -188,7 +188,7 @@ class Admin extends Service implements Kernel {
 		return [
 			[
 				'name'  => self::NOTICE_SECTION,
-				'label' => __( 'Notice Bar Settings', 'display-site-notification-bar' ),
+				'label' => esc_html__( 'Notice Bar Settings', 'display-site-notification-bar' ),
 			],
 		];
 	}
