@@ -46,7 +46,7 @@ class AdminTest extends TestCase {
 	public function test_register_options_page() {
 		$admin = new Admin();
 
-		\WP_Mock::userFunction( '__' )
+		\WP_Mock::userFunction( 'esc_html__' )
 			->andReturnUsing(
 				function ( $arg ) {
 					return $arg;
@@ -133,7 +133,7 @@ class AdminTest extends TestCase {
 	public function test_register_options_init() {
 		$admin = new Admin();
 
-		\WP_Mock::userFunction( '__' )
+		\WP_Mock::userFunction( 'esc_html__' )
 			->andReturnUsing(
 				function ( $arg ) {
 					return $arg;
@@ -212,7 +212,7 @@ class AdminTest extends TestCase {
 		$admin = Mockery::mock( Admin::class )->makePartial();
 		$admin->shouldAllowMockingProtectedMethods();
 
-		\WP_Mock::userFunction( '__' )
+		\WP_Mock::userFunction( 'esc_html__' )
 			->andReturnUsing(
 				function ( $arg ) {
 					return $arg;
@@ -284,7 +284,7 @@ class AdminTest extends TestCase {
 			],
 		];
 
-		\WP_Mock::userFunction( '__' )
+		\WP_Mock::userFunction( 'esc_html__' )
 			->andReturnUsing(
 				function ( $arg ) {
 					return $arg;
