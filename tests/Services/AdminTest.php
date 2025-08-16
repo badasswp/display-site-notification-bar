@@ -60,7 +60,7 @@ class AdminTest extends TestCase {
 				'manage_options',
 				'display-site-notification-bar',
 				[ $admin, 'register_options_cb' ],
-				'dashicons-align-wide',
+				'dashicons-align-center',
 				100
 			)
 			->andReturn( null );
