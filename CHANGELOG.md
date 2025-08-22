@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.0.3
+* Safely escape HTML output.
+* Tested up to WP 6.8.2
+
 # 1.0.2
 * Fix typo in Plugin name.
 * Tested up to WP 6.8.2
