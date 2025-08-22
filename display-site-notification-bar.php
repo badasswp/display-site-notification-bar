@@ -3,7 +3,7 @@
  * Plugin Name: Display Site Notification Bar
  * Plugin URI:  https://github.com/badasswp/display-site-notification-bar
  * Description: Display a notice bar on your WP home page.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      badasswp
  * Author URI:  https://github.com/badasswp
  * License:     GPL v2 or later
