@@ -25,6 +25,34 @@ use DisplaySiteNotificationBar\Services\Admin;
 class AdminTest extends TestCase {
 	public function setUp(): void {
 		\WP_Mock::setUp();
+
+		\WP_Mock::userFunction( 'esc_html' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		\WP_Mock::userFunction( 'esc_html__' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
+
+		\WP_Mock::userFunction( 'esc_html_e' )
+			->andReturnUsing(
+				function ( $arg ) {
+					echo $arg;
+				}
+			);
+
+		\WP_Mock::userFunction( 'esc_attr' )
+			->andReturnUsing(
+				function ( $arg ) {
+					return $arg;
+				}
+			);
 	}
 
 	public function tearDown(): void {
@@ -45,13 +73,6 @@ class AdminTest extends TestCase {
 
 	public function test_register_options_page() {
 		$admin = new Admin();
-
-		\WP_Mock::userFunction( 'esc_html__' )
-			->andReturnUsing(
-				function ( $arg ) {
-					return $arg;
-				}
-			);
 
 		\WP_Mock::userFunction( 'add_menu_page' )
 			->with(
@@ -77,13 +98,6 @@ class AdminTest extends TestCase {
 		\WP_Mock::userFunction( 'get_option' )
 			->with( 'display_site_notification_bar', [] )
 			->andReturn( [] );
-
-		\WP_Mock::userFunction( 'esc_html_e' )
-			->andReturnUsing(
-				function ( $arg ) {
-					echo $arg;
-				}
-			);
 
 		\WP_Mock::userFunction( 'settings_fields' )
 			->andReturnUsing(
@@ -132,13 +146,6 @@ class AdminTest extends TestCase {
 
 	public function test_register_options_init() {
 		$admin = new Admin();
-
-		\WP_Mock::userFunction( 'esc_html__' )
-			->andReturnUsing(
-				function ( $arg ) {
-					return $arg;
-				}
-			);
 
 		\WP_Mock::userFunction( 'register_setting' )
 			->with(
@@ -211,13 +218,6 @@ class AdminTest extends TestCase {
 	public function test_get_sections() {
 		$admin = Mockery::mock( Admin::class )->makePartial();
 		$admin->shouldAllowMockingProtectedMethods();
-
-		\WP_Mock::userFunction( 'esc_html__' )
-			->andReturnUsing(
-				function ( $arg ) {
-					return $arg;
-				}
-			);
 
 		$sections = $admin->get_sections();
 
@@ -391,13 +391,6 @@ class AdminTest extends TestCase {
 	}
 
 	public function test_visibility_cb() {
-		\WP_Mock::userFunction( 'esc_attr' )
-			->andReturnUsing(
-				function ( $arg ) {
-					return $arg;
-				}
-			);
-
 		$response = ( new Admin() )->visibility_cb();
 
 		$this->expectOutputString(
