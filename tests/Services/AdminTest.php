@@ -53,6 +53,34 @@ class AdminTest extends TestCase {
 					return $arg;
 				}
 			);
+
+		\WP_Mock::userFunction( 'wp_kses' )
+			->andReturnUsing(
+				function ( $arg1, $arg2 ) {
+					$dom = new \DOMDocument();
+
+					// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+					@$dom->loadHTML( $arg1 );
+
+					// phpcs:ignore PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket
+					$elements = $dom->getElementsByTagName( '*' );
+
+					$tags = [];
+
+					foreach ( $elements as $el ) {
+						// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+						$tags[] = $el->tagName;
+					}
+
+					$html_tags = array_values( array_diff( array_unique( $tags ), [ 'html', 'body' ] ) );
+
+					if ( ! empty( array_diff( array_keys( $arg2 ), $html_tags ) ) ) {
+						return '';
+					}
+
+					return $arg1;
+				}
+			);
 	}
 
 	public function tearDown(): void {
@@ -384,7 +412,7 @@ class AdminTest extends TestCase {
 				id="position"
 				name="display_site_notification_bar[position]"
 				value=""
-			><option value="top" >top</option><option value="bottom" >bottom</option></select>'
+			><option value="bottom" >bottom</option><option value="top" >top</option></select>'
 		);
 		$this->assertNull( $response );
 		$this->assertConditionsMet();

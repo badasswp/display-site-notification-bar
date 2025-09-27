@@ -3,7 +3,7 @@ Contributors: badasswp
 Tags: site, notice, bar, home, page
 Requires at least: 4.0
 Tested up to: 6.8
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,12 @@ Want to add your personal touch? All of our documentation can be found [here](ht
 2. Settings Page - Configure the plugin options of your choice.
 
 == Changelog ==
+
+= 1.0.4 =
+* Fix: Position & Visibility plugin options escaped twice.
+* Update position default to bottom.
+* Update unit tests.
+* Tested up to WP 6.8.2.
 
 = 1.0.3 =
 * Safely escape HTML output.
