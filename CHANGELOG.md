@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.0.4
+* Fix: Position & Visibility plugin options escaped twice.
+* Update position default to bottom.
+* Update unit tests.
+* Tested up to WP 6.8.2.
+
 # 1.0.3
 * Safely escape HTML output.
 * Tested up to WP 6.8.2
