@@ -338,7 +338,7 @@ class Admin extends Service implements Kernel {
 	public function position_cb(): void {
 		$positions = '';
 
-		foreach ( [ 'top', 'bottom' ] as $position ) {
+		foreach ( [ 'bottom', 'top' ] as $position ) {
 			$selected = '';
 
 			if ( ( $this->options[ self::NOTICE_POSITION ] ?? '' ) === $position ) {
@@ -361,7 +361,15 @@ class Admin extends Service implements Kernel {
 			esc_attr( self::PLUGIN_OPTION ),
 			esc_attr( self::NOTICE_POSITION ),
 			esc_attr( $this->options[ self::NOTICE_POSITION ] ?? '' ),
-			esc_html( $positions )
+			wp_kses(
+				$positions,
+				[
+					'option' => [
+						'value'    => [],
+						'selected' => [],
+					],
+				]
+			)
 		);
 	}
 
@@ -398,7 +406,15 @@ class Admin extends Service implements Kernel {
 			esc_attr( self::PLUGIN_OPTION ),
 			esc_attr( self::NOTICE_VISIBILITY ),
 			esc_attr( $this->options[ self::NOTICE_VISIBILITY ] ?? '' ),
-			esc_html( $pages )
+			wp_kses(
+				$pages,
+				[
+					'option' => [
+						'value'    => [],
+						'selected' => [],
+					],
+				]
+			)
 		);
 	}
 
