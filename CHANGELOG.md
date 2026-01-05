@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5
+* Specify `wordpress-plugin` as Composer package type.
+* Tested up to WP 6.9.
+
 # 1.0.4
 * Fix: Position & Visibility plugin options escaped twice.
 * Update position default to bottom.
