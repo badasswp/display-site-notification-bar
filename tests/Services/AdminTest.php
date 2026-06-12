@@ -21,6 +21,7 @@ use DisplaySiteNotificationBar\Services\Admin;
  * @covers \DisplaySiteNotificationBar\Services\Admin::visibility_cb
  * @covers \DisplaySiteNotificationBar\Services\Admin::sanitize_options
  * @covers \DisplaySiteNotificationBar\Services\Admin::get_settings
+ * @covers \DisplaySiteNotificationBar\Services\Admin::__construct
  */
 class AdminTest extends TestCase {
 	public function setUp(): void {
@@ -92,6 +93,7 @@ class AdminTest extends TestCase {
 
 		\WP_Mock::expectActionAdded( 'admin_menu', [ $admin, 'register_options_page' ] );
 		\WP_Mock::expectActionAdded( 'admin_init', [ $admin, 'register_options_init' ] );
+		\WP_Mock::expectActionAdded( 'admin_init', [ $admin->pluginate, 'init' ] );
 
 		$register = $admin->register();
 
@@ -111,6 +113,21 @@ class AdminTest extends TestCase {
 				[ $admin, 'register_options_cb' ],
 				'dashicons-align-center',
 				100
+			)
+			->andReturn( null );
+
+		\WP_Mock::userFunction( '__' )
+			->andReturnUsing( fn( $text, $domain ) => $text );
+
+		\WP_Mock::userFunction( 'add_submenu_page' )
+			->once()
+			->with(
+				'display-site-notification-bar',
+				'More Plugins',
+				'More Plugins',
+				'manage_options',
+				'display-site-notification-bar-more-plugins',
+				[ $admin, 'register_more_plugins' ]
 			)
 			->andReturn( null );
 

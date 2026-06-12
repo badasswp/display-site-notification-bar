@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+* Feat: Add `More Plugins` options page.
+
 ## 1.0.5
 * Specify `wordpress-plugin` as Composer package type.
 * Tested up to WP 6.9.
