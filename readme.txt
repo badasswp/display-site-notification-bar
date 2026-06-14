@@ -2,7 +2,7 @@
 Contributors: badasswp
 Tags: site, notice, bar, home, page
 Requires at least: 4.0
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 1.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -59,6 +59,10 @@ Want to add your personal touch? All of our documentation can be found [here](ht
 
 = 1.2.0 =
 * Feat: Add `More Plugins` options page.
+
+= 1.1.0 =
+* update CI/CD Pipeline.
+* Tested up to WP 7.0.
 
 = 1.0.5 =
 * Specify `wordpress-plugin` as Composer package type.
