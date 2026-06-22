@@ -13,7 +13,27 @@ namespace DisplaySiteNotificationBar\Services;
 use DisplaySiteNotificationBar\Abstracts\Service;
 use DisplaySiteNotificationBar\Interfaces\Kernel;
 
+use Pluginate\Admin as Pluginate;
+
 class Admin extends Service implements Kernel {
+	/**
+	 * Pluginate instance.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @var Pluginate
+	 */
+	public Pluginate $pluginate;
+
+	/**
+	 * Admin constructor.
+	 *
+	 * @since 1.2.0
+	 */
+	public function __construct() {
+		$this->pluginate = new Pluginate( 'display-site-notification-bar' );
+	}
+
 	/**
 	 * Plugin Options.
 	 *
@@ -94,6 +114,7 @@ class Admin extends Service implements Kernel {
 	public function register(): void {
 		add_action( 'admin_menu', [ $this, 'register_options_page' ] );
 		add_action( 'admin_init', [ $this, 'register_options_init' ] );
+		add_action( 'admin_init', [ $this->pluginate, 'init' ] );
 	}
 
 	/**
@@ -112,6 +133,15 @@ class Admin extends Service implements Kernel {
 			[ $this, 'register_options_cb' ],
 			'dashicons-align-center',
 			100
+		);
+
+		add_submenu_page(
+			self::PLUGIN_SLUG,
+			__( 'More Plugins', 'ping-me-on-slack' ),
+			__( 'More Plugins', 'ping-me-on-slack' ),
+			'manage_options',
+			sprintf( '%s-more-plugins', self::PLUGIN_SLUG ),
+			[ $this, 'register_more_plugins' ]
 		);
 	}
 
@@ -137,6 +167,35 @@ class Admin extends Service implements Kernel {
 			</form>
 		</div>
 		<?php
+	}
+
+	/**
+	 * Register More Plugins.
+	 *
+	 * This controls the display of the
+	 * "More Plugins" submenu page.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @return void
+	 */
+	public function register_more_plugins(): void {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		vprintf(
+			'<section class="wrap">
+				<h1>%s</h1>
+				<p>%s</p>
+				%s
+			</section>',
+			array_map(
+				'__',
+				[
+					'More Plugins',
+					'Check out some other amazing plugin of ours...',
+					$this->pluginate->get_more_plugins(),
+				]
+			)
+		);
 	}
 
 	/**
